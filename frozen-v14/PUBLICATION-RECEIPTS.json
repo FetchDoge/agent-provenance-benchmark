@@ -1,0 +1,90 @@
+{
+  "core_files": {
+    "FRAMEWORKS.md": {
+      "bytes": 101618,
+      "sha256": "7e4e550fe155aa6bc0883fe7598d13564da7a9d61d7fdbdac3454542c7c207e4"
+    },
+    "PROCEDURE.md": {
+      "bytes": 7604,
+      "sha256": "5a142825c6a1642261e1221e93631005f94887d5da3f0f2dd4e377658c950f76"
+    },
+    "RUBRIC.md": {
+      "bytes": 47443,
+      "sha256": "98608ea0bf7f73bb88dc5f407af6602c9793d955f3e84484c70f9bd8099bb01a"
+    },
+    "TASKS.md": {
+      "bytes": 4765,
+      "sha256": "bf181efd81e5ffbcc0de11a6caf0627bcde781ee2c1615fd54067a2d6d774bf2"
+    },
+    "enumerate_frameworks.py": {
+      "sha256": "dbd8b5e3b6facd2e7e02ee0cd461246094191a41495059f7133fb8b01baccb96"
+    },
+    "enumeration-raw.json": {
+      "bytes": 717436,
+      "sha256": "251f86193bf7c4a90070e04a0039072fffa1dbe43757f2e78d588cf270d001cc"
+    },
+    "enumeration-run.log": {
+      "sha256": "7c7e9dec9d375f57f3793177a354544a785f55fa4cc663f1539023cc9dcd5ddc"
+    }
+  },
+  "invariants": {
+    "p1_started": false,
+    "scores_exist": false,
+    "scoring_transcript_genesis": true
+  },
+  "notes": [
+    "Pre-registration publication to Notion + Grok pre-approved by Marcus Richards",
+    "No scores, seals, observations, leaderboard, scoring receipts, or scoring-transcript genesis predate this publication (rubric \u00a78 ordering rule)",
+    "Notion page contains hash index; Grok project contains full file bytes",
+    "Transparency-log/RFC 3161 publication remains separate and unapproved"
+  ],
+  "packet_aggregate_sha256": "8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8",
+  "packet_freeze_timestamp": "2026-10-04T07:15:38Z",
+  "pre_registration": "Phase 3 v14 Freeze",
+  "review_gate": {
+    "adversary": "HOLDS (verdict-first 1200-cap)",
+    "auditor": "HOLDS (findings: none, 11/11 claims verified)",
+    "rubric_version": "v14"
+  },
+  "venues": {
+    "grok": {
+      "account": "Marcus Richards (grok.com)",
+      "files_uploaded": [
+        "PACKET.md",
+        "RUBRIC.md",
+        "FRAMEWORKS.md",
+        "TASKS.md",
+        "PROCEDURE.md"
+      ],
+      "files_verified": true,
+      "made_public_at_utc": "2026-10-04T07:19:14Z",
+      "project_id": "ad9ecc2e-bf87-4edc-8351-9c19694dd227",
+      "project_title": "Phase 3 Pre-registration \u2014 v14 Freeze (2026-10-04)",
+      "project_url": "https://grok.com/project/ad9ecc2e-bf87-4edc-8351-9c19694dd227",
+      "share_setting": "Anyone with the link can view",
+      "verification": "Browser confirmed all 5 files present in file tree, hashes match PACKET.md manifest, share toggle ON (aria-checked=true)"
+    },
+    "notion": {
+      "account": "Marcus Richards's Space (contact@marcusrichards.dev)",
+      "content_status": "Hashes intact (L1-L13 verified). Informational defects: frameworks 2-10 list incomplete, line order issue, minor truncation/formatting. Full framework list in Grok project's FRAMEWORKS.md.",
+      "public_url": "https://ordinary-zipper-8b9.notion.site/Phase-3-Pre-registration-Packet-v14-Freeze-2026-10-04-3ef0727dad6b8050826ac9e9a725106b",
+      "published_at_utc": "2026-10-04T08:03:10Z",
+      "verification": "Browser confirmed public notion.site URL renders without authentication",
+      "viewable_without_signin": true
+    }
+  },
+  "scoring_transcript": {
+    "genesis_attestation_id": "147b9a899302326d#000000",
+    "genesis_issued_at": "2026-10-14T04:07:02.203Z",
+    "genesis_key_id": "ed25519:_uopEv06VgpQHZ7kqkWFZn6Y3B5s7uOOipLxuO_8LeY",
+    "run_id": "147b9a899302326d",
+    "transcript_path": "phase3/scoring/transcript.json",
+    "key_path": "phase3/scoring/transcript-key.json (mode 600)",
+    "verification": "SDK verifyTranscript: ACCEPT (full chain, closer present) - verified 2026-10-14",
+    "correction": "Re-issued 2026-10-13 ~22:07 MDT. The first genesis (9ef6d100ce23461d#000000, 2026-10-14T03:00:31Z) was emitted with an ephemeral key whose private half was never persisted, so its chain could not be continued or closed. It was never published. Genesis args are identical ({prereg_sha256, rubric_version: v14}); the ordering rule remains satisfied. Superseded receipt preserved at phase3/scoring/genesis-superseded.json.",
+    "status": "CLOSED",
+    "chain_length": 73,
+    "contents": "genesis + 20 seal receipts (both lanes) + 50 observation receipts (seq 21-70) + scoring receipt (#000071) + closer",
+    "ordering_rule_check": "All receipts issued_at >= prereg publication 2026-10-04T08:03:10Z (genesis 2026-10-14T04:07:02Z; seals/observations/scoring/closer 2026-10-14). PASS."
+  }
+}

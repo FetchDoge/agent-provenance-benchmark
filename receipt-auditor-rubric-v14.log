@@ -1,0 +1,35 @@
+Verdict: HOLDS
+Findings: none.
+
+# Decisions ledger — rubric v14, auditor round 14 (text-internal; no external check)
+
+Evidence is the v14 body in this brief. Promote = what would move the claim one tier. Text match is terminal for these claims.
+
+1. **§9 proviso is the v14 wording.** Claim: correction fires “unless a surviving loss flag still licenses that value.” Status: VERIFIED — §9 flag-merge paragraph, that clause. Promote: n/a.
+
+2. **Per-anchor licensing parenthetical is in §9.** Claim: D1=1 and D1 suppression licensed by any non-empty subset (any standing flag blocks); D2/D3 suppression and exercised-but-gated 0s licensed by `set_loss` only; standing `payload_loss` alone does not block those. Status: VERIFIED — §9 parenthetical beginning “Licensing is per-anchor”. Promote: n/a.
+
+3. **Auditor falsifier → one production, D2=2 beside `{payload_loss}`, licensed.** Facts: lane A D2=0, signature exercised, private `{set_loss}`; `set_loss` determined absent and dropped; merged standing `{payload_loss}`.
+   - Step 1: own `{set_loss}` + exercised signature → exercised-but-gated D2=0, not 1 (§2 D2=1 boundary).
+   - Step 2: union drops determined-absent `set_loss`; `payload_loss` stands. D2=0 is licensed by the removed flag; surviving `payload_loss` does not license it (§9; §2 payload-loss does not gate D2/D3). Correction fires. Stated facts support D2=2 only (signature exercised; no independent-path fact for 3). Flag remains `{payload_loss}` (step 3 cannot drop flags).
+   - Step 3: adjudicates the post-correction number; cannot re-attach `set_loss` or restore the 0.
+   - Step 4: no UNVERIFIED D1 in the pin; propagation does not fire. D2=2 is legal under payload-loss only (§2, §3 ‡ row).
+   - Step 5: ordinal takes the post-gate cell, not the pre-correction 0.
+   Status: VERIFIED — one reading; the v13 unlicensed-0 hole is closed. Pin text matches (“→ D2=2 beside `{payload_loss}`”). Promote: n/a.
+
+4. **Round-12 hit-2 still one board.** Surviving `set_loss` is a non-empty subset, so it licenses D1=1; correction does not fire; re-score against surviving flags keeps the lossy anchor. D1 stays 1. Status: VERIFIED — §9 “any standing flag blocks their correction” + “If a surviving flag still licenses the value, the correction does not fire”. Promote: n/a.
+
+5. **Round-11 falsifier still resolves.** Lane A D1=1 `{payload_loss}` vs lane B D1=3 `{}`, flag determined absent, merged empty, no surviving licensor → lane A re-scores as a complete record: D1=2, or 3 if its observations assert coverage. Step 3 cannot re-attach the flag. No D1=1 beside `{}`. Status: VERIFIED — §9 D1 falsifier pin. The 2-vs-3 split is observational, not a second rule. Promote: n/a.
+
+6. **Flag-set rule consistent across §2 / D1 anchor / §3 / §5.1 / §7 / §9.** Non-empty subset of `{set_loss, payload_loss}` at D1=1; mixed faults carry both; any `set_loss` gates D2/D3 2–3; payload-loss does not; merge = union; determined-absent drops inside step 2; step 3 cannot add/drop flags; non-empty merged set published. Status: VERIFIED — those sections agree; v14’s per-anchor proviso does not contradict the gate. Promote: n/a.
+
+7. **Version self-references are v14 outside changelog/history.** Operational body (§0–§10, §12) says v14 only. v13 and earlier appear in the top changelog and §11. Status: VERIFIED. Promote: n/a.
+
+8. **Genesis receipt `rubric_version: "v14"`.** Status: VERIFIED — §8 args. Promote: n/a (packet hash is future freeze, not a text defect).
+
+9. **§12 packet names RUBRIC.md (frozen v14).** Header DRAFT + “until frozen, no scoring” is prospective, not a claim the file is already frozen. Status: VERIFIED — §12. Promote: n/a.
+
+10. **§11 records round 13.** Auditor HOLDS-WITH-FINDINGS, one MEDIUM finding, named genuine; adversary round-13 “still running” when v14 drafted (also in the changelog); v14 entry states the per-anchor proviso and the D2=2 pin. Status: VERIFIED — §11 round-13 paragraph. Promote: n/a. Adversary verdict itself: UNKNOWN, explicitly marked pending — not a false hold.
+
+11. **Unmarked UNKNOWN / internal contradiction.** Retention/purge-resistance remains marked UNKNOWN (§8, §10.4). No second production found for the three falsifiers. “Complete record” in the correction sentence is per-value and scoped by the unless-clause; the same paragraph’s pin keeps `{payload_loss}` beside D2=2, so it does not clear a standing non-licensing flag or force D1 off 1. Status: VERIFIED — no unmarked gap, no two-board. Promote: n/a.
+AUDITOR EXIT: 0
