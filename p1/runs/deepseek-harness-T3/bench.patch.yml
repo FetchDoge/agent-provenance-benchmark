@@ -1,0 +1,91 @@
+- id: llm-pi-ai
+  config:
+    providers:
+      bridge:
+        apiKeyEnv: BRIDGE_API_KEY
+        api: openai-completions
+        baseURL: http://127.0.0.1:8378/v1
+        models:
+          - id: bridge-pinned
+
+- id: agent-loop
+  config:
+    agents:
+      - id: main
+        provider: bridge
+        model: bridge-pinned
+        cwd: /home/hatch/workspace/portfolio-hackathon/phase3/p1/runs/deepseek-harness-T3/sandbox
+
+- id: agent-default-model
+  config:
+    provider: bridge
+    model: bridge-pinned
+
+- id: session-persistence-jsonl
+  config:
+    root: /home/hatch/workspace/portfolio-hackathon/phase3/p1/runs/deepseek-harness-T3/dsh-home/sessions
+    compression: none
+
+- insert:
+    - id: harness-shims-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: harness_shims
+        transport: stdio
+        command: python3
+        args: ['/home/hatch/workspace/portfolio-hackathon/phase3/p1/harness/mcp_shim_server.py']
+        cwd: /home/hatch/workspace/portfolio-hackathon/phase3/p1/runs/deepseek-harness-T3/sandbox
+        env:
+          SANDBOX_ROOT: /home/hatch/workspace/portfolio-hackathon/phase3/p1/runs/deepseek-harness-T3/sandbox
+
+- id: tool-bash
+  disabled: true
+
+- id: tool-pwsh
+  disabled: true
+
+- id: tool-jobs
+  disabled: true
+
+- id: tool-fs
+  disabled: true
+
+- id: tool-fs-search
+  disabled: true
+
+- id: tool-skill
+  disabled: true
+
+- id: tool-subagent-control
+  disabled: true
+
+- id: tool-subagent-list-agents
+  disabled: true
+
+- id: tool-subagent
+  disabled: true
+
+- id: tool-subagent-fork
+  disabled: true
+
+- id: tool-workflow
+  disabled: true
+
+- id: tool-todo
+  disabled: true
+
+- id: tool-goal
+  disabled: true
+
+- id: tool-ralph
+  disabled: true
+
+- id: tool-web
+  disabled: true
+
+- id: otel
+  disabled: true
+
+- id: session-telemetry-otel
+  disabled: true
+

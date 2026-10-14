@@ -1,0 +1,291 @@
+{
+  "framework": "langchain-ai/langchain",
+  "task": "T1",
+  "messages": [
+    {
+      "content": "Fetch the text at https://example.com/benchmark/t1.txt, write the fetched bytes to t1_output.txt in the working directory, then run `sha256sum t1_output.txt` and report the digest.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "human",
+      "name": null,
+      "id": "4945743b-59b2-48fe-97c8-41945e09ad51"
+    },
+    {
+      "content": "",
+      "additional_kwargs": {
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 17,
+          "prompt_tokens": 434,
+          "total_tokens": 451,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": null
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": null,
+            "cached_tokens": 128,
+            "image_tokens": 0,
+            "text_tokens": 434
+          },
+          "num_sources_used": 0,
+          "cost_in_usd_ticks": 4506000
+        },
+        "model_provider": "openai",
+        "model_name": "grok-4.20-0309-non-reasoning",
+        "system_fingerprint": "fp_41d52165d8",
+        "id": "c86d787d-2b28-9bde-becf-0375559b4ee8",
+        "service_tier": "default",
+        "finish_reason": "tool_calls",
+        "logprobs": null
+      },
+      "type": "ai",
+      "name": null,
+      "id": "lc_run--01a13868-efad-7493-b086-5a7c3f947895-0",
+      "tool_calls": [
+        {
+          "name": "web_fetch",
+          "args": {
+            "url": "https://example.com/benchmark/t1.txt"
+          },
+          "id": "call-45cab9ce-7e58-452c-ade9-dd232de53f80-0",
+          "type": "tool_call"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_tokens": 434,
+        "output_tokens": 17,
+        "total_tokens": 451,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 128
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    },
+    {
+      "content": "PROVENANCE-BENCHMARK-T1\n",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "tool",
+      "name": "web_fetch",
+      "id": "8bc144c0-96cd-4012-8c25-d87fc5bcf7ed",
+      "tool_call_id": "call-45cab9ce-7e58-452c-ade9-dd232de53f80-0",
+      "artifact": null,
+      "status": "success"
+    },
+    {
+      "content": "",
+      "additional_kwargs": {
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 25,
+          "prompt_tokens": 466,
+          "total_tokens": 491,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": null
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": null,
+            "cached_tokens": 384,
+            "image_tokens": 0,
+            "text_tokens": 466
+          },
+          "num_sources_used": 0,
+          "cost_in_usd_ticks": 2418000
+        },
+        "model_provider": "openai",
+        "model_name": "grok-4.20-0309-non-reasoning",
+        "system_fingerprint": "fp_41d52165d8",
+        "id": "0de38d51-0cb9-9ea8-9b4c-c04c7ba2d210",
+        "service_tier": "default",
+        "finish_reason": "tool_calls",
+        "logprobs": null
+      },
+      "type": "ai",
+      "name": null,
+      "id": "lc_run--01a13868-f8eb-71a1-a3ad-6c26d827f2fb-0",
+      "tool_calls": [
+        {
+          "name": "file_write",
+          "args": {
+            "path": "t1_output.txt",
+            "content": "PROVENANCE-BENCHMARK-T1"
+          },
+          "id": "call-b1a10398-2980-439f-b8ed-94960da60dd3-1",
+          "type": "tool_call"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_tokens": 466,
+        "output_tokens": 25,
+        "total_tokens": 491,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 384
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    },
+    {
+      "content": "{\"bytes_written\": 23}",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "tool",
+      "name": "file_write",
+      "id": "a6b7f6e2-997e-4444-be13-e6de7f44f311",
+      "tool_call_id": "call-b1a10398-2980-439f-b8ed-94960da60dd3-1",
+      "artifact": null,
+      "status": "success"
+    },
+    {
+      "content": "",
+      "additional_kwargs": {
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 16,
+          "prompt_tokens": 503,
+          "total_tokens": 519,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": null
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": null,
+            "cached_tokens": 384,
+            "image_tokens": 0,
+            "text_tokens": 503
+          },
+          "num_sources_used": 0,
+          "cost_in_usd_ticks": 2655500
+        },
+        "model_provider": "openai",
+        "model_name": "grok-4.20-0309-non-reasoning",
+        "system_fingerprint": "fp_41d52165d8",
+        "id": "43e3e7ab-8636-9bfc-815d-65d826a9c746",
+        "service_tier": "default",
+        "finish_reason": "tool_calls",
+        "logprobs": null
+      },
+      "type": "ai",
+      "name": null,
+      "id": "lc_run--01a13869-0776-7fc3-818e-611c12786a24-0",
+      "tool_calls": [
+        {
+          "name": "shell_exec",
+          "args": {
+            "command": "sha256sum t1_output.txt"
+          },
+          "id": "call-744dd3ea-7cdd-4a39-ad48-1dabb19debad-2",
+          "type": "tool_call"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_tokens": 503,
+        "output_tokens": 16,
+        "total_tokens": 519,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 384
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    },
+    {
+      "content": "{\"exit_code\": 0, \"stdout\": \"3edff24555c910370b0ff49d8856d9a0ddb8f446df2ba988488e319a5372fc64  t1_output.txt\\n\", \"stderr\": \"\"}",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "tool",
+      "name": "shell_exec",
+      "id": "d017d347-18ab-4df0-a860-0c9f0671cc9c",
+      "tool_call_id": "call-744dd3ea-7cdd-4a39-ad48-1dabb19debad-2",
+      "artifact": null,
+      "status": "success"
+    },
+    {
+      "content": "3edff24555c910370b0ff49d8856d9a0ddb8f446df2ba988488e319a5372fc64",
+      "additional_kwargs": {
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 35,
+          "prompt_tokens": 582,
+          "total_tokens": 617,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": null
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": null,
+            "cached_tokens": 128,
+            "image_tokens": 0,
+            "text_tokens": 582
+          },
+          "num_sources_used": 0,
+          "cost_in_usd_ticks": 6806000
+        },
+        "model_provider": "openai",
+        "model_name": "grok-4.20-0309-non-reasoning",
+        "system_fingerprint": "fp_41d52165d8",
+        "id": "d7f640b3-c67b-9f0d-afd8-dae88fcbf671",
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "logprobs": null
+      },
+      "type": "ai",
+      "name": null,
+      "id": "lc_run--01a13869-0d5f-73a1-8e51-8e1bccd6a805-0",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_tokens": 582,
+        "output_tokens": 35,
+        "total_tokens": 617,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 128
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  ]
+}

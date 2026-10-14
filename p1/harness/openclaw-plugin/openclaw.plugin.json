@@ -1,0 +1,1 @@
+{"configSchema":{"additionalProperties":false,"properties":{"sandboxDir":{"type":"string"}},"type":"object"},"contracts":{"tools":["web_fetch","file_write","shell_exec"]},"description":"Benchmark harness tool shims (frozen TASKS.md behavior) for the Phase 3 provenance benchmark.","id":"harness-shims","name":"Harness Shims"}

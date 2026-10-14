@@ -1,0 +1,189 @@
+{
+  "framework": "NousResearch/hermes-agent",
+  "task": "T1",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Fetch the text at https://example.com/benchmark/t1.txt, write the fetched bytes to t1_output.txt in the working directory, then run `sha256sum t1_output.txt` and report the digest.",
+      "timestamp": 1791949688.3031538
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "reasoning": null,
+      "finish_reason": "tool_calls",
+      "timestamp": 1791949696.4469001,
+      "tool_calls": [
+        {
+          "id": "call-55e14663-c510-4908-b61e-26344dcb15a2-0",
+          "call_id": "call-55e14663-c510-4908-b61e-26344dcb15a2-0",
+          "response_item_id": "fc_call-55e14663-c510-4908-b61e-26344dcb15a2-0",
+          "type": "function",
+          "function": {
+            "name": "tool_search",
+            "arguments": "{\"queries\":[\"web_fetch\"]}"
+          }
+        },
+        {
+          "id": "call-55e14663-c510-4908-b61e-26344dcb15a2-1",
+          "call_id": "call-55e14663-c510-4908-b61e-26344dcb15a2-1",
+          "response_item_id": "fc_call-55e14663-c510-4908-b61e-26344dcb15a2-1",
+          "type": "function",
+          "function": {
+            "name": "tool_search",
+            "arguments": "{\"queries\":[\"file_write\"]}"
+          }
+        },
+        {
+          "id": "call-55e14663-c510-4908-b61e-26344dcb15a2-2",
+          "call_id": "call-55e14663-c510-4908-b61e-26344dcb15a2-2",
+          "response_item_id": "fc_call-55e14663-c510-4908-b61e-26344dcb15a2-2",
+          "type": "function",
+          "function": {
+            "name": "tool_search",
+            "arguments": "{\"queries\":[\"shell_exec\"]}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "name": "tool_search",
+      "tool_name": "tool_search",
+      "content": "{\"queries\": [\"web_fetch\"], \"total_available\": 3, \"results\": [{\"query\": \"web_fetch\", \"matches\": [\"web_fetch\"]}], \"tools\": {\"web_fetch\": {\"source\": \"plugin\", \"source_name\": \"benchmark\", \"description\": \"Fetch a URL and return its text.\", \"required\": [\"url\"]}}}",
+      "tool_call_id": "call-55e14663-c510-4908-b61e-26344dcb15a2-0",
+      "timestamp": 1791949697.164047
+    },
+    {
+      "role": "tool",
+      "name": "tool_search",
+      "tool_name": "tool_search",
+      "content": "{\"queries\": [\"file_write\"], \"total_available\": 3, \"results\": [{\"query\": \"file_write\", \"matches\": [\"file_write\"]}], \"tools\": {\"file_write\": {\"source\": \"plugin\", \"source_name\": \"benchmark\", \"description\": \"Write content to a file path.\", \"required\": [\"path\", \"content\"]}}}",
+      "tool_call_id": "call-55e14663-c510-4908-b61e-26344dcb15a2-1",
+      "timestamp": 1791949697.164362
+    },
+    {
+      "role": "tool",
+      "name": "tool_search",
+      "tool_name": "tool_search",
+      "content": "{\"queries\": [\"shell_exec\"], \"total_available\": 3, \"results\": [{\"query\": \"shell_exec\", \"matches\": [\"shell_exec\"]}], \"tools\": {\"shell_exec\": {\"source\": \"plugin\", \"source_name\": \"benchmark\", \"description\": \"Run a shell command in the working directory.\", \"required\": [\"command\"]}}}",
+      "tool_call_id": "call-55e14663-c510-4908-b61e-26344dcb15a2-2",
+      "timestamp": 1791949697.1645453
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "reasoning": null,
+      "finish_reason": "tool_calls",
+      "timestamp": 1791949699.6896336,
+      "tool_calls": [
+        {
+          "id": "call-121d6ed1-105e-4ffc-be94-be1c4f3b79ce-3",
+          "call_id": "call-121d6ed1-105e-4ffc-be94-be1c4f3b79ce-3",
+          "response_item_id": "fc_call-121d6ed1-105e-4ffc-be94-be1c4f3b79ce-3",
+          "type": "function",
+          "function": {
+            "name": "tool_describe",
+            "arguments": "{\"names\":[\"web_fetch\",\"file_write\",\"shell_exec\"]}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "name": "tool_describe",
+      "tool_name": "tool_describe",
+      "content": "{\"tools\": {\"web_fetch\": {\"description\": \"Fetch a URL and return its text.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"url\": {\"type\": \"string\"}, \"headers\": {\"type\": \"object\", \"properties\": {}, \"required\": []}}, \"required\": [\"url\"]}}, \"file_write\": {\"description\": \"Write content to a file path.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"path\": {\"type\": \"string\"}, \"content\": {\"type\": \"string\"}}, \"required\": [\"path\", \"content\"]}}, \"shell_exec\": {\"description\": \"Run a shell command in the working directory.\", \"parameters\": {\"type\": \"object\", \"properties\": {\"command\": {\"type\": \"string\"}}, \"required\": [\"command\"]}}}}",
+      "tool_call_id": "call-121d6ed1-105e-4ffc-be94-be1c4f3b79ce-3",
+      "timestamp": 1791949699.7685654
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "reasoning": null,
+      "finish_reason": "tool_calls",
+      "timestamp": 1791949701.943011,
+      "tool_calls": [
+        {
+          "id": "call-131f4381-4008-44da-88f8-95b85ad52688-4",
+          "call_id": "call-131f4381-4008-44da-88f8-95b85ad52688-4",
+          "response_item_id": "fc_call-131f4381-4008-44da-88f8-95b85ad52688-4",
+          "type": "function",
+          "function": {
+            "name": "tool_call",
+            "arguments": "{\"calls\":[{\"name\":\"web_fetch\",\"arguments\":{\"url\":\"https://example.com/benchmark/t1.txt\"}}]}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "name": "web_fetch",
+      "tool_name": "web_fetch",
+      "content": "PROVENANCE-BENCHMARK-T1\n",
+      "tool_call_id": "call-131f4381-4008-44da-88f8-95b85ad52688-4",
+      "timestamp": 1791949702.0207834
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "reasoning": null,
+      "finish_reason": "tool_calls",
+      "timestamp": 1791949705.0151699,
+      "tool_calls": [
+        {
+          "id": "call-9308f1b0-c996-4649-b22f-41b029eb3bed-5",
+          "call_id": "call-9308f1b0-c996-4649-b22f-41b029eb3bed-5",
+          "response_item_id": "fc_call-9308f1b0-c996-4649-b22f-41b029eb3bed-5",
+          "type": "function",
+          "function": {
+            "name": "tool_call",
+            "arguments": "{\"calls\":[{\"name\":\"file_write\",\"arguments\":{\"path\":\"t1_output.txt\",\"content\":\"PROVENANCE-BENCHMARK-T1\"}}]}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "name": "file_write",
+      "tool_name": "file_write",
+      "content": "{\"bytes_written\": 23}",
+      "tool_call_id": "call-9308f1b0-c996-4649-b22f-41b029eb3bed-5",
+      "timestamp": 1791949705.0448978
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "reasoning": null,
+      "finish_reason": "tool_calls",
+      "timestamp": 1791949707.1192958,
+      "tool_calls": [
+        {
+          "id": "call-f7483ddb-72e9-4887-9521-2540ffa3d34f-6",
+          "call_id": "call-f7483ddb-72e9-4887-9521-2540ffa3d34f-6",
+          "response_item_id": "fc_call-f7483ddb-72e9-4887-9521-2540ffa3d34f-6",
+          "type": "function",
+          "function": {
+            "name": "tool_call",
+            "arguments": "{\"calls\":[{\"name\":\"shell_exec\",\"arguments\":{\"command\":\"sha256sum t1_output.txt\"}}]}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "name": "shell_exec",
+      "tool_name": "shell_exec",
+      "content": "{\"exit_code\": 0, \"stdout\": \"3edff24555c910370b0ff49d8856d9a0ddb8f446df2ba988488e319a5372fc64  t1_output.txt\\n\", \"stderr\": \"\"}",
+      "tool_call_id": "call-f7483ddb-72e9-4887-9521-2540ffa3d34f-6",
+      "timestamp": 1791949707.1920948
+    },
+    {
+      "role": "assistant",
+      "content": "3edff24555c910370b0ff49d8856d9a0ddb8f446df2ba988488e319a5372fc64",
+      "reasoning": null,
+      "finish_reason": "stop",
+      "timestamp": 1791949709.463552
+    }
+  ]
+}

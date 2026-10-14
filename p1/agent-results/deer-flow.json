@@ -1,0 +1,20 @@
+{
+  "framework": "bytedance/deer-flow",
+  "pinned_sha": "830de11c664d33aa8bd0abd94ac33f40fc939eaa",
+  "feasibility": "live",
+  "runs": {
+    "T1": {
+      "status": "live-collected",
+      "artifact_sha256": "9e44e0736affa4c98a2658e51a8d61ff2722a335fcb10116f284c3e5f7491f48"
+    },
+    "T2": {
+      "status": "live-collected",
+      "artifact_sha256": "b37a2a5d5dffdc7990440770dc86a739b00012fe8e671cbe60183de1e56a2d42"
+    },
+    "T3": {
+      "status": "live-collected",
+      "artifact_sha256": "7bf564a87f2ef07d7e457d52b2db1b286eee06f15d55c1c2e4db86aae27d9c5b"
+    }
+  },
+  "notes": "Integrated via DeerFlow's SDK factory (deerflow.agents.factory.create_deerflow_agent) at the pinned commit, ChatOpenAI pointed at the loopback bridge, harness shims as StructuredTools; RuntimeFeatures(sandbox=False) so DeerFlow's own sandbox provisioning stayed out and the shims were the tool surface. Install required the in-repo deerflow-extension-api==0.2.5 (not on PyPI) installed from the clone first, plus pip --timeout 120 to survive egress stalls. Observations for scoring (not scored here): T1 record complete/ordered (model dropped trailing newline: 24B fetched, 23B written, digest 3edff245...); T2 failed file_write is present in the record with its error, agent recovered via mkdir and completed; T3 fixture secret appears in cleartext in the native artifact (2 occurrences)."
+}

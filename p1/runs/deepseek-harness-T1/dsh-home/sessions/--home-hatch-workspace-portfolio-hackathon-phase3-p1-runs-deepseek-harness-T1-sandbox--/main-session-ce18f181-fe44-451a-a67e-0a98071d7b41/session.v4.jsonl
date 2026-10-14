@@ -1,0 +1,4 @@
+{"type":"session","version":4,"id":"main-session-ce18f181-fe44-451a-a67e-0a98071d7b41","createdAt":1791951224090,"cwd":"/home/hatch/workspace/portfolio-hackathon/phase3/p1/runs/deepseek-harness-T1/sandbox","isSeeded":false,"delegationDepth":0}
+{"type":"permission/preset","seq":0,"time":1791951224380,"data":{"preset":"workspace-write"}}
+{"type":"sandbox/mode","seq":1,"time":1791951224394,"data":{"mode":"workspace-write"}}
+{"type":"approval/policy","seq":2,"time":1791951224394,"data":{"policy":"ask"}}

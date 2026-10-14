@@ -1,0 +1,20 @@
+{
+  "framework": "deepseek-ai/deepseek-harness",
+  "pinned_sha": "5badb15009ae1756c3afe0ae0cef1faafc290ccc",
+  "feasibility": "live",
+  "runs": {
+    "T1": {
+      "status": "live-collected",
+      "artifact_sha256": "b34a6529c9d2b191d4f17467add2d31a79fd1045c8528de5cbc51407094fd89f"
+    },
+    "T2": {
+      "status": "live-collected",
+      "artifact_sha256": "ae7ca7466c53bf2da61cd6f19aac2f8a91dcf90dc2c2a36f1db683c5798bf897"
+    },
+    "T3": {
+      "status": "live-collected",
+      "artifact_sha256": "6323ffb4af76863017b94b2f550a49f35610120c4137f7792d3be139679ad499"
+    }
+  },
+  "notes": "Integrated at the pinned commit from source (pnpm filtered install for @deepseek-ai/dsh + build:native-system for the flock addon; full-monorepo install abandoned after 254 registry write errors on oversized optional tarballs). Ran dsh's own headless profile via tsx with a per-run Cordis patch: custom OpenAI-Completions provider 'bridge' (llm-pi-ai) + agent-default-model pin, harness shims exposed through dsh's own MCP client plugin (harness/mcp_shim_server.py), all native tool-* plugins disabled (plan-mode's exit_plan_mode tool remained registered but was never called). Model transport needed a per-run SSE relay (harness/sse_relay.py): dsh's pi-ai adapter is streaming-only while the shared bridge returns whole JSON; the relay forwards to the same pinned bridge endpoint and re-emits the completion as SSE \u2014 no model substitution. Native artifact = dsh's persisted session JSONL (session.v4.jsonl), copied unmodified. Observations for scoring (not scored here): T1 complete ordered record (web_fetch/file_write/shell_exec as mcp__harness_shims__* with separate tool/call + tool/result events; digest 3edff245..., same 23-byte newline drop as other lanes). T2: the agent pre-emptively ran mkdir -p before file_write, so the injected failure never occurred \u2014 the record is complete for the calls actually made, but the failure path was not exercised (contrast LangChain/DeerFlow, where the failed call is in the record). T3: fixture secret appears in cleartext in the native artifact (5 occurrences, incl. instruction echo and replay state), while the persisted tool/call event renders the header as 'Bearer <redacted>' \u2014 a partial redaction behavior for P2 to weigh."
+}

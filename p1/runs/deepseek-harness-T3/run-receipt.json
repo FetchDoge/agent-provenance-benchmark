@@ -1,0 +1,12 @@
+{
+  "framework": "deepseek-ai/deepseek-harness",
+  "pinned_sha": "5badb15009ae1756c3afe0ae0cef1faafc290ccc",
+  "task": "T3",
+  "evidence_tier": "LIVE",
+  "model": "grok-4.20-0309-non-reasoning via loopback bridge (xAI)",
+  "artifact_ref": "/home/hatch/workspace/portfolio-hackathon/phase3/p1/runs/deepseek-harness-T3/native-artifact.jsonl",
+  "artifact_sha256": "6323ffb4af76863017b94b2f550a49f35610120c4137f7792d3be139679ad499",
+  "elapsed_s": 16.74,
+  "session_file": "/home/hatch/workspace/portfolio-hackathon/phase3/p1/runs/deepseek-harness-T3/dsh-home/sessions/--home-hatch-workspace-portfolio-hackathon-phase3-p1-src-deepseek-harness--/session-0f513afc-cbae-4b98-ade2-7bbaca24d2cb/session.v4.jsonl",
+  "session_lines": 35
+}

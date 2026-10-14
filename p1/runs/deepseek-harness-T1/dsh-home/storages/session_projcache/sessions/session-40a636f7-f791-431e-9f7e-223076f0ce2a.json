@@ -1,0 +1,223 @@
+{
+  "version": 7,
+  "record": {
+    "identity": {
+      "formatVersion": 4,
+      "createdAt": 1791951224578,
+      "cwd": "/home/hatch/workspace/portfolio-hackathon/phase3/p1/src/deepseek-harness",
+      "isSeeded": false,
+      "inheritedEventCount": 0
+    },
+    "rows": {
+      "title": {
+        "ver": 1,
+        "seq": 33,
+        "val": "Fetch and hash t1.txt"
+      },
+      "titleInput": {
+        "ver": 3,
+        "seq": 33,
+        "val": {
+          "first": {
+            "seq": 8,
+            "text": "Fetch the text at https://example.com/benchmark/t1.txt, write the fetched bytes to t1_output.txt in the working directory, then run `sha256sum t1_output.txt` and report the digest."
+          },
+          "count": 1,
+          "lastSeq": 8
+        }
+      },
+      "llmRetry": {
+        "ver": 1,
+        "seq": 33,
+        "val": {}
+      },
+      "sandboxMode": {
+        "ver": 1,
+        "seq": 33,
+        "val": "workspace-write"
+      },
+      "goal": {
+        "ver": 6,
+        "seq": 33,
+        "val": {
+          "current": null,
+          "seenGoalIds": [],
+          "failure": null
+        }
+      },
+      "tokenUsage": {
+        "ver": 2,
+        "seq": 33,
+        "val": {
+          "totals": {
+            "uncachedInputTokens": 477,
+            "outputTokens": 117,
+            "cacheReadTokens": 19072,
+            "cacheWriteTokens": 0
+          },
+          "last": {
+            "turn": 1,
+            "step": 4,
+            "buckets": {
+              "uncachedInputTokens": 121,
+              "outputTokens": 35,
+              "cacheReadTokens": 4864,
+              "cacheWriteTokens": 0
+            }
+          }
+        }
+      },
+      "contextPressure": {
+        "ver": 5,
+        "seq": 33,
+        "val": {
+          "surfaceTokens": 4906,
+          "contextWindow": 262144,
+          "pressureTokens": 4985,
+          "sampledSurfaceTokens": 4882
+        }
+      },
+      "contextBreakdown": {
+        "ver": 5,
+        "seq": 33,
+        "val": {
+          "nodes": [
+            {
+              "seq": 7,
+              "heuristicTokens": 98,
+              "system": true
+            },
+            {
+              "seq": 8,
+              "heuristicTokens": 53,
+              "system": false
+            },
+            {
+              "seq": 9,
+              "heuristicTokens": 4441,
+              "system": false
+            },
+            {
+              "seq": 10,
+              "heuristicTokens": 137,
+              "system": false
+            },
+            {
+              "seq": 15,
+              "heuristicTokens": 28,
+              "system": false
+            },
+            {
+              "seq": 17,
+              "heuristicTokens": 14,
+              "system": false
+            },
+            {
+              "seq": 21,
+              "heuristicTokens": 31,
+              "system": false
+            },
+            {
+              "seq": 23,
+              "heuristicTokens": 14,
+              "system": false
+            },
+            {
+              "seq": 26,
+              "heuristicTokens": 26,
+              "system": false
+            },
+            {
+              "seq": 28,
+              "heuristicTokens": 40,
+              "system": false
+            },
+            {
+              "seq": 31,
+              "heuristicTokens": 24,
+              "system": false
+            }
+          ],
+          "breakdown": {
+            "systemTokens": 98,
+            "toolsTokens": 543,
+            "messageTokens": 4808
+          }
+        }
+      },
+      "subagentCatalog": {
+        "ver": 3,
+        "seq": 33,
+        "val": {
+          "inheritedEventCount": 0
+        }
+      },
+      "subagentTiming": {
+        "ver": 3,
+        "seq": 33,
+        "val": {
+          "descriptorSeen": false,
+          "settledMs": 0
+        }
+      },
+      "subagent": {
+        "ver": 2,
+        "seq": 33,
+        "val": {}
+      },
+      "plan": {
+        "ver": 3,
+        "seq": 33,
+        "val": {
+          "active": false,
+          "wanted": null,
+          "running": null,
+          "activeAtLastHeader": false
+        }
+      },
+      "turnBoundary": {
+        "ver": 2,
+        "seq": 33,
+        "val": {
+          "openTurnStartSeq": null,
+          "lastStepStartSeq": 30,
+          "lastStepBoundary": {
+            "kind": "end",
+            "seq": 32
+          },
+          "lastTurn": 1
+        }
+      },
+      "inbox": {
+        "ver": 1,
+        "seq": 33,
+        "val": {
+          "next-turn": [],
+          "next-step": []
+        }
+      },
+      "userQuestions": {
+        "ver": 2,
+        "seq": 33,
+        "val": {
+          "inheritedEventCount": 0,
+          "timed": false,
+          "questions": {
+            "active": [],
+            "settled": []
+          }
+        }
+      },
+      "permissions": {
+        "ver": 2,
+        "seq": 33,
+        "val": {
+          "preset": "workspace-write",
+          "sandbox": "workspace-write",
+          "approval": "ask",
+          "seeded": false
+        }
+      }
+    }
+  }
+}

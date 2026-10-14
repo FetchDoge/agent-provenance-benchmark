@@ -1,0 +1,11 @@
+{
+  "framework": "NousResearch/hermes-agent",
+  "pinned_sha": "937f23db2d707cde1c87337fde3aafee514d117c",
+  "task": "T1",
+  "evidence_tier": "LIVE",
+  "model": "grok-4.20-0309-non-reasoning via loopback bridge (xAI)",
+  "artifact_ref": "/home/hatch/workspace/portfolio-hackathon/phase3/p1/runs/hermes-agent-T1/native-artifact.json",
+  "artifact_sha256": "74c0a0d6920a76a8d88a8cc5fff341f95e46a7bce3fdf9e21a3c25ab686545bb",
+  "elapsed_s": 23.57,
+  "message_count": 14
+}

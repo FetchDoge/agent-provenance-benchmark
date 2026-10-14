@@ -1,0 +1,2 @@
+context_lengths:
+  grok-4.20-0309-non-reasoning@http://127.0.0.1:8377/v1: 1000000

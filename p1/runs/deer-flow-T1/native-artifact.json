@@ -1,0 +1,315 @@
+{
+  "framework": "bytedance/deer-flow",
+  "task": "T1",
+  "messages": [
+    {
+      "content": "Fetch the text at https://example.com/benchmark/t1.txt, write the fetched bytes to t1_output.txt in the working directory, then run `sha256sum t1_output.txt` and report the digest.",
+      "additional_kwargs": {},
+      "response_metadata": {},
+      "type": "human",
+      "name": null,
+      "id": "693f9c61-edfd-4b28-8b4f-9ab0928b0c33"
+    },
+    {
+      "content": "",
+      "additional_kwargs": {
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 17,
+          "prompt_tokens": 1458,
+          "total_tokens": 1475,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": null
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": null,
+            "cached_tokens": 128,
+            "image_tokens": 0,
+            "text_tokens": 1458
+          },
+          "num_sources_used": 0,
+          "cost_in_usd_ticks": 17306000
+        },
+        "model_provider": "openai",
+        "model_name": "grok-4.20-0309-non-reasoning",
+        "system_fingerprint": "fp_41d52165d8",
+        "id": "26e1b2f6-7c0b-9de1-a4bc-80e724fc6ea2",
+        "service_tier": "default",
+        "finish_reason": "tool_calls",
+        "logprobs": null
+      },
+      "type": "ai",
+      "name": "default",
+      "id": "lc_run--01a13890-fd99-7a01-b7fd-cc5d38532d90-0",
+      "tool_calls": [
+        {
+          "name": "web_fetch",
+          "args": {
+            "url": "https://example.com/benchmark/t1.txt"
+          },
+          "id": "call-bddf4a18-6bc6-4f24-8709-3c4c92790bf4-0",
+          "type": "tool_call"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_tokens": 1458,
+        "output_tokens": 17,
+        "total_tokens": 1475,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 128
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    },
+    {
+      "content": "PROVENANCE-BENCHMARK-T1\n",
+      "additional_kwargs": {
+        "deerflow_tool_meta": {
+          "status": "success",
+          "error_type": null,
+          "recoverable_by_model": true,
+          "recommended_next_action": "continue",
+          "source": "content_analysis"
+        }
+      },
+      "response_metadata": {},
+      "type": "tool",
+      "name": "web_fetch",
+      "id": "bbf50109-19a3-4f69-8d20-cc47d93cae5b",
+      "tool_call_id": "call-bddf4a18-6bc6-4f24-8709-3c4c92790bf4-0",
+      "artifact": null,
+      "status": "success"
+    },
+    {
+      "content": "",
+      "additional_kwargs": {
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 25,
+          "prompt_tokens": 1490,
+          "total_tokens": 1515,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": null
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": null,
+            "cached_tokens": 1408,
+            "image_tokens": 0,
+            "text_tokens": 1490
+          },
+          "num_sources_used": 0,
+          "cost_in_usd_ticks": 4466000
+        },
+        "model_provider": "openai",
+        "model_name": "grok-4.20-0309-non-reasoning",
+        "system_fingerprint": "fp_41d52165d8",
+        "id": "a3899d7d-14cd-9e7e-879b-c5c1e35248ee",
+        "service_tier": "default",
+        "finish_reason": "tool_calls",
+        "logprobs": null
+      },
+      "type": "ai",
+      "name": "default",
+      "id": "lc_run--01a13891-045e-7372-8530-e3744f28b985-0",
+      "tool_calls": [
+        {
+          "name": "file_write",
+          "args": {
+            "path": "t1_output.txt",
+            "content": "PROVENANCE-BENCHMARK-T1"
+          },
+          "id": "call-a3f5f060-4049-40bb-a7a7-de60c96ff2ba-1",
+          "type": "tool_call"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_tokens": 1490,
+        "output_tokens": 25,
+        "total_tokens": 1515,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 1408
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    },
+    {
+      "content": "{\"bytes_written\": 23}",
+      "additional_kwargs": {
+        "deerflow_tool_meta": {
+          "status": "success",
+          "error_type": null,
+          "recoverable_by_model": true,
+          "recommended_next_action": "continue",
+          "source": "content_analysis"
+        }
+      },
+      "response_metadata": {},
+      "type": "tool",
+      "name": "file_write",
+      "id": "eba02cdb-616b-4bd8-831c-af6fa1d219b6",
+      "tool_call_id": "call-a3f5f060-4049-40bb-a7a7-de60c96ff2ba-1",
+      "artifact": null,
+      "status": "success"
+    },
+    {
+      "content": "",
+      "additional_kwargs": {
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 16,
+          "prompt_tokens": 1527,
+          "total_tokens": 1543,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": null
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": null,
+            "cached_tokens": 1408,
+            "image_tokens": 0,
+            "text_tokens": 1527
+          },
+          "num_sources_used": 0,
+          "cost_in_usd_ticks": 4703500
+        },
+        "model_provider": "openai",
+        "model_name": "grok-4.20-0309-non-reasoning",
+        "system_fingerprint": "fp_41d52165d8",
+        "id": "d8dc59b5-b3b9-9d6f-ba70-895310d65caa",
+        "service_tier": "default",
+        "finish_reason": "tool_calls",
+        "logprobs": null
+      },
+      "type": "ai",
+      "name": "default",
+      "id": "lc_run--01a13891-09d6-7b33-bf27-093e0015c761-0",
+      "tool_calls": [
+        {
+          "name": "shell_exec",
+          "args": {
+            "command": "sha256sum t1_output.txt"
+          },
+          "id": "call-18b76984-dbfd-40d1-a0d1-8633d810b0a8-2",
+          "type": "tool_call"
+        }
+      ],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_tokens": 1527,
+        "output_tokens": 16,
+        "total_tokens": 1543,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 1408
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    },
+    {
+      "content": "{\"exit_code\": 0, \"stdout\": \"3edff24555c910370b0ff49d8856d9a0ddb8f446df2ba988488e319a5372fc64  t1_output.txt\\n\", \"stderr\": \"\"}",
+      "additional_kwargs": {
+        "deerflow_tool_meta": {
+          "status": "success",
+          "error_type": null,
+          "recoverable_by_model": true,
+          "recommended_next_action": "continue",
+          "source": "content_analysis"
+        }
+      },
+      "response_metadata": {},
+      "type": "tool",
+      "name": "shell_exec",
+      "id": "d213c200-ad4b-4ec5-bae0-89c4d936ae62",
+      "tool_call_id": "call-18b76984-dbfd-40d1-a0d1-8633d810b0a8-2",
+      "artifact": null,
+      "status": "success"
+    },
+    {
+      "content": "3edff24555c910370b0ff49d8856d9a0ddb8f446df2ba988488e319a5372fc64",
+      "additional_kwargs": {
+        "refusal": null
+      },
+      "response_metadata": {
+        "token_usage": {
+          "completion_tokens": 35,
+          "prompt_tokens": 1606,
+          "total_tokens": 1641,
+          "completion_tokens_details": {
+            "accepted_prediction_tokens": 0,
+            "audio_tokens": 0,
+            "reasoning_tokens": 0,
+            "rejected_prediction_tokens": 0,
+            "text_tokens": null
+          },
+          "prompt_tokens_details": {
+            "audio_tokens": 0,
+            "cache_write_tokens": null,
+            "cached_tokens": 1408,
+            "image_tokens": 0,
+            "text_tokens": 1606
+          },
+          "num_sources_used": 0,
+          "cost_in_usd_ticks": 6166000
+        },
+        "model_provider": "openai",
+        "model_name": "grok-4.20-0309-non-reasoning",
+        "system_fingerprint": "fp_41d52165d8",
+        "id": "f56df46b-e2c0-9bf7-9f02-9f3c412fff0c",
+        "service_tier": "default",
+        "finish_reason": "stop",
+        "logprobs": null
+      },
+      "type": "ai",
+      "name": "default",
+      "id": "lc_run--01a13891-0e71-76b0-a39a-670e2b9dc8fc-0",
+      "tool_calls": [],
+      "invalid_tool_calls": [],
+      "usage_metadata": {
+        "input_tokens": 1606,
+        "output_tokens": 35,
+        "total_tokens": 1641,
+        "input_token_details": {
+          "audio": 0,
+          "cache_read": 1408
+        },
+        "output_token_details": {
+          "audio": 0,
+          "reasoning": 0
+        }
+      }
+    }
+  ]
+}

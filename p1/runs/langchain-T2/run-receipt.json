@@ -1,0 +1,11 @@
+{
+  "framework": "langchain-ai/langchain",
+  "pinned_sha": "57236d55d9ffc8634bda987861e6fce460aff268",
+  "task": "T2",
+  "evidence_tier": "LIVE",
+  "model": "grok-4.20-0309-non-reasoning via loopback bridge (xAI)",
+  "artifact_ref": "/home/hatch/workspace/portfolio-hackathon/phase3/p1/runs/langchain-T2/native-artifact.json",
+  "artifact_sha256": "4a79221977d525bd68f445ac4f08a94b79b6e2169c22d1aa2d71575f16df5157",
+  "elapsed_s": 12.06,
+  "message_count": 12
+}

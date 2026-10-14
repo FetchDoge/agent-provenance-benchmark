@@ -1,0 +1,165 @@
+{
+  "frameworks": [
+    {
+      "feasibility": "doc-tier",
+      "framework": "openclaw/openclaw",
+      "rank": 1,
+      "runs": {
+        "T1": "blocked",
+        "T2": "blocked",
+        "T3": "blocked"
+      },
+      "sha": "9e0734be272f358832056da5c78e52b80b3e33e5",
+      "note": "Install infeasible on this VM: gateway/daemon product, no embeddable loop; headless exec needs the full 902MB monorepo built from source; pnpm install through the throttled registry died mid-linking (928 pkgs) and a prefer-offline retry stalled in resolution. Full integration prepared and reusable (tool plugin + shim bridge + restrictive config + runner). Re-attempt condition: unthrottled registry or pre-populated store + dist build. Session state is SQLite-backed in this version."
+    },
+    {
+      "feasibility": "live",
+      "framework": "NousResearch/hermes-agent",
+      "rank": 2,
+      "runs": {
+        "T1": "live-collected",
+        "T2": "live-collected",
+        "T3": "live-collected"
+      },
+      "sha": "937f23db2d707cde1c87337fde3aafee514d117c",
+      "artifact_sha256": {
+        "T1": "74c0a0d6920a76a8d88a8cc5fff341f95e46a7bce3fdf9e21a3c25ab686545bb",
+        "T2": "d6353bc3758a97f7b87a222a017449964e5caf95b3b4bd5b0c4b30c0aed5680f",
+        "T3": "ed8f1c4149c89f009bb5872a1b111b30924fd34dd8b67f4e2af5cc6412f45db7"
+      },
+      "note": "Python 3.14 via uv sync; streaming disabled via framework config; digests match LangChain pilot."
+    },
+    {
+      "feasibility": "live",
+      "framework": "deepseek-ai/deepseek-harness",
+      "rank": 3,
+      "runs": {
+        "T1": "live-collected",
+        "T2": "live-collected",
+        "T3": "live-collected"
+      },
+      "sha": "5badb15009ae1756c3afe0ae0cef1faafc290ccc",
+      "artifact_sha256": {
+        "T1": "b34a6529c9d2b191d4f17467add2d31a79fd1045c8528de5cbc51407094fd89f",
+        "T2": "ae7ca7466c53bf2da61cd6f19aac2f8a91dcf90dc2c2a36f1db683c5798bf897",
+        "T3": "6323ffb4af76863017b94b2f550a49f35610120c4137f7792d3be139679ad499"
+      },
+      "note": "dsh headless via its own MCP client plugin + per-run SSE relay (streaming-only adapter vs whole-JSON bridge; no model substitution). Artifact = persisted session JSONL, unmodified. T1 complete ordered record, 23B newline drop as elsewhere. T2: agent pre-created dir - trap never fired (joins AutoGPT/MetaGPT pattern). T3: secret cleartext 5x in artifact BUT persisted tool/call event redacts the header (Bearer <redacted>) - partial redaction, first of its kind in the set alongside Hermes. Hashes re-verified by parent: True"
+    },
+    {
+      "feasibility": "live",
+      "framework": "Significant-Gravitas/AutoGPT",
+      "rank": 4,
+      "runs": {
+        "T1": "live-collected",
+        "T2": "live-collected",
+        "T3": "live-collected"
+      },
+      "sha": "f8b0e0a87c38b67f6e6cb21f3ee03ff5584c3588",
+      "artifact_sha256": {
+        "T1": "75d5e3dbf0e17d092115a5a045f6b34b895090511e533de3e5a8ffa18e9948e5",
+        "T2": "d6479dd738882cc627379815921cdd06f45964cd9fd85d2f455a440ad7f55738",
+        "T3": "a45f7a37f9421b3946f6a16e05550e2ad887c24a61def4dd73ae0907c083e9a0"
+      },
+      "note": "Classic agent only (platform out of scope, Polyform). Shims via CommandProvider component, 94 native commands disabled via AppConfig, leaving shim names only. T1: fixture newline dropped (23B written), recorded. T2: model pre-empted the trap (mkdir -p via shell_exec before write) - failure never fired, full record kept; behavioral contrast with LangChain. T3: secret in cleartext 3x in native artifact, no redaction. Hashes re-verified by parent: True"
+    },
+    {
+      "feasibility": "live",
+      "framework": "langchain-ai/langchain",
+      "rank": 5,
+      "runs": {
+        "T1": "live-collected",
+        "T2": "live-collected",
+        "T3": "live-collected"
+      },
+      "sha": "57236d55d9ffc8634bda987861e6fce460aff268",
+      "artifact_sha256": {
+        "T1": "842e95b4281c4c167cbaa38ac84775460762fbe1070c230288195c64210d0526",
+        "T2": "4a79221977d525bd68f445ac4f08a94b79b6e2169c22d1aa2d71575f16df5157",
+        "T3": "4a010611292f1fb2849737269d1365e76c6425ae3ed14fef0534a042c7fe5896"
+      }
+    },
+    {
+      "feasibility": "doc-tier",
+      "framework": "google-gemini/gemini-cli",
+      "rank": 6,
+      "runs": {
+        "T1": "infeasible-doc",
+        "T2": "infeasible-doc",
+        "T3": "infeasible-doc"
+      },
+      "sha": "fb972b2f87fe7d5b06d37eac711490162d98de2c",
+      "note": "Feasibility investigated at pinned commit fb972b2f (clone verified). Findings: (1) packages/core/src/core/contentGenerator.ts createContentGenerator() constructs ONLY a GoogleGenAI client (googleGenAI.models, the Gemini-protocol client from @google/genai) for every auth type, including AuthType.GATEWAY \u2014 baseUrl is passed as httpOptions.baseUrl to that Gemini client. (2) Zero occurrences of 'chat/"
+    },
+    {
+      "feasibility": "doc-tier",
+      "framework": "OpenHands/OpenHands",
+      "rank": 7,
+      "runs": {
+        "T1": "infeasible-doc",
+        "T2": "infeasible-doc",
+        "T3": "infeasible-doc"
+      },
+      "sha": "a6bba78ffd5a8b31620770f52383b1a2c0477fcd",
+      "note": [
+        "Clone verified: HEAD == a6bba78ffd5a8b31620770f52383b1a2c0477fcd ('feat: auto-enable Run on first message when the first router is created (#17840)').",
+        "PRIMARY BLOCKER \u2014 no agent loop in the pinned repository. package.json at the pinned commit: name '@openhands/agent-canvas', version 1.24.0, description 'Agent Canvas UI for OpenHands - run AI coding agents with a visual interface'. The tree is a React Router + Electron frontend (src/, vite.config.ts, electron/); there is no Python package (no pyproject.toml/setup.py) and no agent/runtime code \u2014 the only Python files are .github CI scripts, tests/e2e mock servers, and tools/canvas_ui_tool.py.",
+        "Docs confirm the split. docs/architecture.md L3: 'Agent Canvas is a React and TypeScript frontend for running and monitoring OpenHands agents across local, remote, and hosted environments.' L23: 'The primary backend is the OpenHands Agent Server (github.com/OpenHands/software-agent-sdk/tree/main/openhands-agent-server/openhands/agent_server)' \u2014 i.e. the agent loop lives in a DIFFERENT repository (OpenHands/software-agent-sdk), which is not the pinned/enumerated framework repo.",
+        "bin/agent-canvas.mjs L6-7/L62: 'Agent-server via uvx' / 'Runs the full stack with agent-server and automation backend via uvx' \u2014 the executable agent is an external package fetched at install time at a launcher-default version, not code at the pinned commit; a run would not be a run of the pinned artifact.",
+        "SHIM-IMPOSABILITY: within the pinned artifact there is no tool-execution layer at all, hence no supported plug point to substitute the harness web_fetch/file_write/shell_exec callables as the agent's tools. OpenHands agents (via the external Agent Server) execute their own bash/file/browser tools inside their own runtime/workspace; the deterministic shim semantics (fixed bytes, unknown-url error, header pass-through) cannot be imposed without modifying an external codebase \u2014 benchmark-side alteration, barred by TASKS.md/rubric sec.5.",
+        "SUPPORTING BLOCKER \u2014 runtime environment: README launch options are (1) host agent-server via uvx, (2) Docker sandbox, (3) multiple Docker sandboxes. On this VM: 'docker: command not found' (no Docker binary, docker info fails), and 'uv: command not found' (no uvx for option 1). node v24.20.0 / npm 10.9.4 are present but only serve the UI.",
+        "Model bridge was UP during assessment (GET http://127.0.0.1:8377/v1/models returned grok-4.20-0309-non-reasoning); no model substitution was made or needed \u2014 infeasibility is structural, not a model problem.",
+        "No runs were attempted and none faked: no p1/runs/openhands-T<n> artifacts exist. Scoring falls to deterministic DOC-tier rules (rubric sec.5.1) per TASKS.md run requirements.",
+        "Assessment completed well inside the 45-minute cap; the blocker is architectural (repo content at the pinned commit), not a matter of additional install effort."
+      ]
+    },
+    {
+      "feasibility": "live",
+      "framework": "bytedance/deer-flow",
+      "rank": 8,
+      "runs": {
+        "T1": "live-collected",
+        "T2": "live-collected",
+        "T3": "live-collected"
+      },
+      "sha": "830de11c664d33aa8bd0abd94ac33f40fc939eaa",
+      "artifact_sha256": {
+        "T1": "9e44e0736affa4c98a2658e51a8d61ff2722a335fcb10116f284c3e5f7491f48",
+        "T2": "b37a2a5d5dffdc7990440770dc86a739b00012fe8e671cbe60183de1e56a2d42",
+        "T3": "7bf564a87f2ef07d7e457d52b2db1b286eee06f15d55c1c2e4db86aae27d9c5b"
+      },
+      "note": "SDK factory integration, sandbox provisioning off, shims as tool surface. Hashes re-verified by parent: True"
+    },
+    {
+      "feasibility": "doc-tier",
+      "framework": "ruvnet/ruflo",
+      "rank": 9,
+      "runs": {
+        "T1": "infeasible-doc",
+        "T2": "infeasible-doc",
+        "T3": "infeasible-doc"
+      },
+      "sha": "caf5078be6627c6496fa2497a63b72e80a0bcf14",
+      "note": "Architecture investigated at pinned commit caf5078b (clone verified; package is claude-flow v3.51.1, package.json description: 'Ruflo - Enterprise AI agent orchestration for Claude Code'). Evidence: (1) The framework's tool-issuing execution modes delegate to external agent CLIs: cli/src/commands/swarm.ts:730-731 lists run modes '- claude -p (headless background)' and '- hive-mind spawn --claude ("
+    },
+    {
+      "feasibility": "live",
+      "framework": "FoundationAgents/MetaGPT",
+      "rank": 10,
+      "runs": {
+        "T1": "live-collected",
+        "T2": "live-collected",
+        "T3": "live-collected"
+      },
+      "sha": "11cdf466d042aece04fc6cfd13b28e1a70341b1f",
+      "artifact_sha256": {
+        "T1": "8687e71b11f5273956b0696f44b9deabf281a6e89d3d46b5941f692fd2d1ec00",
+        "T2": "bd2bb0023d88c863de323e5e094677cacbe39a9210deb1e12915c6448299c9b9",
+        "T3": "1b05894b7343bd8cb4194d9b1200b295da2c723d55681550cbb1cdf093801300"
+      },
+      "note": "RoleZero loop; shims registered via the _update_tool_execution hook, Terminal bound to shell shim. T1: clean chain, newline dropped (23B) as in LangChain pilot. T2: agent pre-created the dir via shell_exec - trap never fired; record also holds a Plan.create_plan rejection. T3: secret verbatim in recorded web_fetch args. Setup: py<3.12 pin bypassed (--ignore-requires-python), RAG deps skipped off-path, stream=False via framework config (bridge returns whole JSON). Hashes re-verified by parent: True"
+    }
+  ],
+  "note": "Run ledger for P1. Status per run: pending | live-collected | infeasible-doc | failed. feasibility: pending | pilot | live | doc-tier. Native artifact per collected run is hashed (artifact_sha256) in its run receipt under runs/.",
+  "prereg_sha256": "8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8"
+}

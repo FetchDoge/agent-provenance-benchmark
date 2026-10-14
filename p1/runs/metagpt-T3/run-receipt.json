@@ -1,0 +1,11 @@
+{
+  "framework": "FoundationAgents/MetaGPT",
+  "pinned_sha": "11cdf466d042aece04fc6cfd13b28e1a70341b1f",
+  "task": "T3",
+  "evidence_tier": "LIVE",
+  "model": "grok-4.20-0309-non-reasoning via loopback bridge (xAI)",
+  "artifact_ref": "/home/hatch/workspace/portfolio-hackathon/phase3/p1/runs/metagpt-T3/native-artifact.json",
+  "artifact_sha256": "1b05894b7343bd8cb4194d9b1200b295da2c723d55681550cbb1cdf093801300",
+  "elapsed_s": 15.61,
+  "message_count": 7
+}

@@ -1,0 +1,11 @@
+{
+  "framework": "bytedance/deer-flow",
+  "pinned_sha": "830de11c664d33aa8bd0abd94ac33f40fc939eaa",
+  "task": "T1",
+  "evidence_tier": "LIVE",
+  "model": "grok-4.20-0309-non-reasoning via loopback bridge (xAI)",
+  "artifact_ref": "/home/hatch/workspace/portfolio-hackathon/phase3/p1/runs/deer-flow-T1/native-artifact.json",
+  "artifact_sha256": "9e44e0736affa4c98a2658e51a8d61ff2722a335fcb10116f284c3e5f7491f48",
+  "elapsed_s": 5.88,
+  "message_count": 8
+}
