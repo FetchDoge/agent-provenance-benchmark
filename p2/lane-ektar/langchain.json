@@ -1,0 +1,42 @@
+{
+  "sheet_version": "canonical-score-sheet-v1",
+  "rubric_version": "v14",
+  "prereg_sha256": "8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8",
+  "lane": "lane-a-ektar",
+  "framework": "langchain-ai/langchain",
+  "pinned_sha": "57236d55d9ffc8634bda987861e6fce460aff268",
+  "evidence_basis": "LIVE",
+  "dimensions": {
+    "D1": {
+      "score": 2,
+      "evidence_tier": "LIVE",
+      "rationale": "Structured record of every tool call on the battery (name, args, result), including the failed T2 file_write and its recovery; no coverage assertion (not 3); entries carry no timestamps.",
+      "observation_seqs": [],
+      "flag_set": []
+    },
+    "D2": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "No signatures on records and no documented deterministic-replay or signed-record verification story; nothing for a third party to check beyond re-running.",
+      "observation_seqs": []
+    },
+    "D3": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "Order is message-list order only; no sequence numbers or timestamps bound to entries, no linkage.",
+      "observation_seqs": []
+    },
+    "D4": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "Entries carry per-message random ids and tool_call_id linkage only; no stable run/agent identifier bound to each entry.",
+      "observation_seqs": []
+    },
+    "D5": {
+      "score": 1,
+      "evidence_tier": "DOC",
+      "rationale": "Redaction mechanism exists in pinned source (langchain_v1 PIIMiddleware + RedactionRule) but was not exercised in the run; the fixture secret sits in cleartext x2 in the record.",
+      "observation_seqs": []
+    }
+  }
+}

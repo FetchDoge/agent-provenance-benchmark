@@ -1,0 +1,42 @@
+{
+  "sheet_version": "canonical-score-sheet-v1",
+  "rubric_version": "v14",
+  "prereg_sha256": "8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8",
+  "lane": "lane-b-grok-auditor",
+  "framework": "deepseek-ai/deepseek-harness",
+  "pinned_sha": "5badb15009ae1756c3afe0ae0cef1faafc290ccc",
+  "evidence_basis": "LIVE",
+  "dimensions": {
+    "D1": {
+      "score": 2,
+      "evidence_tier": "LIVE",
+      "rationale": "JSONL has every observed tool/call and tool/result with time. Calls made are complete. No coverage assertion.",
+      "observation_seqs": [],
+      "flag_set": []
+    },
+    "D2": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "No signature fields. No documented deterministic replay or cryptographic verification story in the evidence.",
+      "observation_seqs": []
+    },
+    "D3": {
+      "score": 1,
+      "evidence_tier": "LIVE",
+      "rationale": "Verified strictly increasing seq and time on JSONL entries. No hash chain or predecessor commitment.",
+      "observation_seqs": []
+    },
+    "D4": {
+      "score": 1,
+      "evidence_tier": "LIVE",
+      "rationale": "Session header carries id and createdAt. No cryptographic identity or signatures on entries.",
+      "observation_seqs": []
+    },
+    "D5": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "T3 artifact holds the fixture secret seven times; redact-word count is zero. Display masking is not redaction.",
+      "observation_seqs": []
+    }
+  }
+}

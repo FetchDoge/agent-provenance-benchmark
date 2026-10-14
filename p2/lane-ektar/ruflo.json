@@ -1,0 +1,42 @@
+{
+  "sheet_version": "canonical-score-sheet-v1",
+  "rubric_version": "v14",
+  "prereg_sha256": "8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8",
+  "lane": "lane-a-ektar",
+  "framework": "ruvnet/ruflo",
+  "pinned_sha": "caf5078be6627c6496fa2497a63b72e80a0bcf14",
+  "evidence_basis": "DOC",
+  "dimensions": {
+    "D1": {
+      "score": "UNVERIFIED",
+      "evidence_tier": "DOC",
+      "rationale": "Pinned docs describe an AttestationLog audit trail for MEMORY operations and performance metrics, but no per-tool-call record of an agent run is stated; silence on this dimension per s5.1.",
+      "observation_seqs": [],
+      "flag_set": []
+    },
+    "D2": {
+      "score": "UNVERIFIED",
+      "evidence_tier": "DOC",
+      "rationale": "No verification mechanism is stated for a run record (federation message verification is a different record).",
+      "observation_seqs": []
+    },
+    "D3": {
+      "score": "UNVERIFIED",
+      "evidence_tier": "DOC",
+      "rationale": "No ordering mechanism is stated for a run record.",
+      "observation_seqs": []
+    },
+    "D4": {
+      "score": 1,
+      "evidence_tier": "DOC",
+      "rationale": "agentId is bound throughout the described task and memory data model (dispatch inputs, memory records) - records bound to an agent identifier as described. No record signing stated (not 2).",
+      "observation_seqs": []
+    },
+    "D5": {
+      "score": "UNVERIFIED",
+      "evidence_tier": "DOC",
+      "rationale": "PII stripping is described for federation egress messages only; docs are silent on redaction of a run record - UNVERIFIED per s5.1 silence rule.",
+      "observation_seqs": []
+    }
+  }
+}

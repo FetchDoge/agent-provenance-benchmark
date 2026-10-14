@@ -1,0 +1,42 @@
+{
+  "sheet_version": "canonical-score-sheet-v1",
+  "rubric_version": "v14",
+  "prereg_sha256": "8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8",
+  "lane": "lane-a-ektar",
+  "framework": "openclaw/openclaw",
+  "pinned_sha": "9e0734be272f358832056da5c78e52b80b3e33e5",
+  "evidence_basis": "DOC",
+  "dimensions": {
+    "D1": {
+      "score": 2,
+      "evidence_tier": "DOC",
+      "rationale": "Pinned concepts docs describe an OpenClaw-owned session transcript pairing every tool call with its toolResult entry; a tool_result_persist hook can transform results pre-transcript (noted); no coverage assertion.",
+      "observation_seqs": [],
+      "flag_set": []
+    },
+    "D2": {
+      "score": 0,
+      "evidence_tier": "DOC",
+      "rationale": "No signature, replay, or verification element stated for the transcript.",
+      "observation_seqs": []
+    },
+    "D3": {
+      "score": 1,
+      "evidence_tier": "DOC",
+      "rationale": "The session archive schema in pinned source gives every record an explicit seq (records table: idx, seq, record_json, owns_run): sequence-bound ordering stated. No cryptographic linkage (2-3 DOC-capped regardless).",
+      "observation_seqs": []
+    },
+    "D4": {
+      "score": 1,
+      "evidence_tier": "DOC",
+      "rationale": "Sessions are per-agent (agent bindings, per-agent state) and archive records carry owns_run: entries bound to agent/run identity as described.",
+      "observation_seqs": []
+    },
+    "D5": {
+      "score": 0,
+      "evidence_tier": "DOC",
+      "rationale": "No record-redaction mechanism stated for the transcript (Matrix protocol redaction in channel docs is unrelated): D5=0 per s5.1 stated-format rule.",
+      "observation_seqs": []
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "sheet_version": "canonical-score-sheet-v1",
+  "rubric_version": "v14",
+  "prereg_sha256": "8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8",
+  "lane": "lane-b-grok-auditor",
+  "framework": "google-gemini/gemini-cli",
+  "pinned_sha": "fb972b2f87fe7d5b06d37eac711490162d98de2c",
+  "evidence_basis": "DOC",
+  "dimensions": {
+    "D1": {
+      "score": 2,
+      "evidence_tier": "DOC",
+      "rationale": "Pinned source specifies ToolCallRecord with name, args, result, and timestamp. No loss asserted and no coverage assertion.",
+      "observation_seqs": [],
+      "flag_set": []
+    },
+    "D2": {
+      "score": 0,
+      "evidence_tier": "DOC",
+      "rationale": "No signature, identified key, algorithm, or deterministic replay is stated. Described record format lacks a verification story.",
+      "observation_seqs": []
+    },
+    "D3": {
+      "score": 1,
+      "evidence_tier": "DOC",
+      "rationale": "Timestamp fields are bound to record entries. No sequence numbers, hash chain, or closing record is stated.",
+      "observation_seqs": []
+    },
+    "D4": {
+      "score": 1,
+      "evidence_tier": "DOC",
+      "rationale": "sessionId on ConversationRecord and optional agentId on ToolCallRecord are stable identifiers, not cryptographic identity.",
+      "observation_seqs": []
+    },
+    "D5": {
+      "score": 1,
+      "evidence_tier": "DOC",
+      "rationale": "Docs state environment-variable redaction, off by default, unexercised. Verification-preserving redaction is not described.",
+      "observation_seqs": []
+    }
+  }
+}

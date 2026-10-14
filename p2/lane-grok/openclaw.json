@@ -1,0 +1,42 @@
+{
+  "sheet_version": "canonical-score-sheet-v1",
+  "rubric_version": "v14",
+  "prereg_sha256": "8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8",
+  "lane": "lane-b-grok-auditor",
+  "framework": "openclaw/openclaw",
+  "pinned_sha": "9e0734be272f358832056da5c78e52b80b3e33e5",
+  "evidence_basis": "DOC",
+  "dimensions": {
+    "D1": {
+      "score": 0,
+      "evidence_tier": "DOC",
+      "rationale": "Session transcript pairs tool calls with toolResults in sequenced JSON records; name, arguments, and timestamps unspecified.",
+      "observation_seqs": [],
+      "flag_set": []
+    },
+    "D2": {
+      "score": 0,
+      "evidence_tier": "DOC",
+      "rationale": "No signature scheme or deterministic replay is stated for the session archive.",
+      "observation_seqs": []
+    },
+    "D3": {
+      "score": 1,
+      "evidence_tier": "DOC",
+      "rationale": "Archive schema binds seq INTEGER NOT NULL on each record; no cryptographic linkage stated.",
+      "observation_seqs": []
+    },
+    "D4": {
+      "score": 0,
+      "evidence_tier": "DOC",
+      "rationale": "Sessions are per-agent, but entries lack a bound run or agent identifier; owns_run is a flag.",
+      "observation_seqs": []
+    },
+    "D5": {
+      "score": 0,
+      "evidence_tier": "DOC",
+      "rationale": "Record format is described and no transcript redaction mechanism is stated.",
+      "observation_seqs": []
+    }
+  }
+}

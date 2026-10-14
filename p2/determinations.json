@@ -1,0 +1,38 @@
+{
+  "deer-flow": {
+    "cell_overrides": {
+      "D1": 2
+    },
+    "reason_D1": "Re-examination vs anchors: Lane B concedes a complete structured per-call record with args+results and observed no loss (flag_set empty). D1=0 requires absence of a durable per-call record; D1=1 requires a non-empty loss flag set. Neither fits; the only anchor-consistent value is 2 (timestamps absent - noted as the defect, contrast Hermes/DeepSeek)."
+  },
+  "openhands": {
+    "cell_overrides": {
+      "D1": 2
+    },
+    "reason_D1": "Re-examination on the fuller pinned source: src/components/conversation-events/chat/event-content-helpers/get-action-content.ts:105 pins tool_name on action events and in-repo fixtures construct such events; event-service types pin ISO timestamps, TIMESTAMP sort, per-conversation fetch and transcript export. A per-tool-call record (name, args via action content, result via observation events) is described. Lane B scored from the types excerpt alone; the fuller source resolves to 2."
+  },
+  "openclaw": {
+    "range_cells": {
+      "D1": [
+        0,
+        2
+      ]
+    },
+    "reason_D1": "Unresolved after re-examination: concepts docs state the owned transcript pairs tool calls with toolResult entries, but no pinned format contract specifies per-entry name/arguments/timestamps (TranscriptEntry is Record<string,unknown> with id/parentId). Published as range 0-2, ordinal at lower bound per s9."
+  },
+  "ruflo": {
+    "cell_overrides": {
+      "D1": "UNVERIFIED",
+      "D2": "UNVERIFIED",
+      "D3": "UNVERIFIED"
+    },
+    "reason": "Re-examination per s5.1 silence rule: both lanes' factual findings concur that no per-tool-call run record, run-record verification mechanism, or run-record ordering mechanism is described in the pinned docs/source (AttestationLog covers memory operations; ed25519 covers federation agents). Silence at DOC = UNVERIFIED, not zero (s5.1, s5: absence of evidence is not evidence of absence)."
+  },
+  "langchain": {
+    "cell_overrides": {
+      "D1": 2
+    },
+    "reason_D1": "Re-examination vs anchors: Lane B concedes 'set is complete with no payload truncation' and set no loss flags. D1=0 requires absence of a durable per-call record; D1=1 requires a non-empty flag set. Neither fits a complete structured per-call record; only 2 is anchor-consistent (timestamps absent - the noted defect). Same determination as deer-flow (identical record format).",
+    "note_D5": "Lane B pack did not include the PIIMiddleware evidence (Lane A basis gap, disclosed); D5 split 1/0 resolves by the mechanical mean, 0.5."
+  }
+}

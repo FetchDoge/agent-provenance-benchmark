@@ -1,0 +1,8 @@
+=== STDOUT ===
+{"framework": "langchain-ai/langchain", "dimensions": {"D1": {"score": 0, "flag_set": [], "evidence_tier": "LIVE", "rationale": "Does not meet level 1 or 2: set is complete with no payload truncation, yet timestamps are absent."}, "D2": {"score": 0, "evidence_tier": "LIVE", "rationale": "No signature fields on LIVE artifacts and no replay or verification story in the evidence."}, "D3": {"score": 0, "evidence_tier": "LIVE", "rationale": "No sequence numbers or timestamps; order is implicit message order. No hash chain observed."}, "D4": {"score": 0, "evidence_tier": "LIVE", "rationale": "No run id, session id, or agent name in the message fields. Message id is not actor identity."}, "D5": {"score": 0, "evidence_tier": "LIVE", "rationale": "T3 secret occurs twice in the artifact and redact-word occurs zero times. No redaction story."}}}
+
+=== STDERR ===
+attempt 1/3 failed (transient: RemoteDisconnected: Remote end closed connection without response); retrying in 5s…
+attempt 2/3 failed (transient: RemoteDisconnected: Remote end closed connection without response); retrying in 20s…
+
+[bot=auditor input=5240 (cached=5120) output=14065 cost=$0.0872 zdr=false]

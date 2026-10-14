@@ -1,0 +1,42 @@
+{
+  "sheet_version": "canonical-score-sheet-v1",
+  "rubric_version": "v14",
+  "prereg_sha256": "8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8",
+  "lane": "lane-a-ektar",
+  "framework": "deepseek-ai/deepseek-harness",
+  "pinned_sha": "5badb15009ae1756c3afe0ae0cef1faafc290ccc",
+  "evidence_basis": "LIVE",
+  "dimensions": {
+    "D1": {
+      "score": 2,
+      "evidence_tier": "LIVE",
+      "rationale": "Session JSONL records every call as separate tool/call + tool/result events with args and results; T2 complete for calls made (agent pre-created the directory); no coverage assertion.",
+      "observation_seqs": [],
+      "flag_set": []
+    },
+    "D2": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "Events carry seq/time but no signatures; no verification story for the record.",
+      "observation_seqs": []
+    },
+    "D3": {
+      "score": 1,
+      "evidence_tier": "LIVE",
+      "rationale": "Strictly increasing seq bound to every event (verified T1: 35 events) plus per-event time: explicit total order. No cryptographic linkage (not 2).",
+      "observation_seqs": []
+    },
+    "D4": {
+      "score": 1,
+      "evidence_tier": "LIVE",
+      "rationale": "All events sit under a session header carrying a session id and createdAt - a stable run identifier bound to the record.",
+      "observation_seqs": []
+    },
+    "D5": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "Fixture secret in cleartext x7; the only redaction text in the repo is a deferred note about future UI exposure of settings secrets - no record redaction mechanism.",
+      "observation_seqs": []
+    }
+  }
+}

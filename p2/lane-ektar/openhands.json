@@ -1,0 +1,42 @@
+{
+  "sheet_version": "canonical-score-sheet-v1",
+  "rubric_version": "v14",
+  "prereg_sha256": "8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8",
+  "lane": "lane-a-ektar",
+  "framework": "OpenHands/OpenHands",
+  "pinned_sha": "a6bba78ffd5a8b31620770f52383b1a2c0477fcd",
+  "evidence_basis": "DOC",
+  "dimensions": {
+    "D1": {
+      "score": 2,
+      "evidence_tier": "DOC",
+      "rationale": "The pinned repo describes a per-event record for agent actions (event service types, transcript export), with a strict-pagination note that a partial history must never be mistaken for exhaustion - a described structured record with completeness care; no coverage assertion.",
+      "observation_seqs": [],
+      "flag_set": []
+    },
+    "D2": {
+      "score": 0,
+      "evidence_tier": "DOC",
+      "rationale": "No signature, replay, or verification element stated for the event record.",
+      "observation_seqs": []
+    },
+    "D3": {
+      "score": 1,
+      "evidence_tier": "DOC",
+      "rationale": "Events carry ISO timestamps and a TIMESTAMP sort order in the pinned types: an ordering story stated. No linkage (2-3 DOC-capped regardless).",
+      "observation_seqs": []
+    },
+    "D4": {
+      "score": 1,
+      "evidence_tier": "DOC",
+      "rationale": "The event record is scoped per conversationId in the pinned API types - entries bound to a run identifier.",
+      "observation_seqs": []
+    },
+    "D5": {
+      "score": 0,
+      "evidence_tier": "DOC",
+      "rationale": "A record format is described and no redaction story is stated for it: D5=0 per s5.1 stated-format rule.",
+      "observation_seqs": []
+    }
+  }
+}

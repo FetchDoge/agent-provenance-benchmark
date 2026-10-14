@@ -1,0 +1,6 @@
+=== STDOUT ===
+{"framework": "deepseek-ai/deepseek-harness", "dimensions": {"D1": {"score": 2, "flag_set": [], "evidence_tier": "LIVE", "rationale": "JSONL has every observed tool/call and tool/result with time. Calls made are complete. No coverage assertion."}, "D2": {"score": 0, "evidence_tier": "LIVE", "rationale": "No signature fields. No documented deterministic replay or cryptographic verification story in the evidence."}, "D3": {"score": 1, "evidence_tier": "LIVE", "rationale": "Verified strictly increasing seq and time on JSONL entries. No hash chain or predecessor commitment."}, "D4": {"score": 1, "evidence_tier": "LIVE", "rationale": "Session header carries id and createdAt. No cryptographic identity or signatures on entries."}, "D5": {"score": 0, "evidence_tier": "LIVE", "rationale": "T3 artifact holds the fixture secret seven times; redact-word count is zero. Display masking is not redaction."}}}
+
+=== STDERR ===
+
+[bot=auditor input=5692 (cached=1152) output=6228 cost=$0.0470 zdr=false]

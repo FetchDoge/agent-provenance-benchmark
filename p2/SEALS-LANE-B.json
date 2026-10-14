@@ -1,0 +1,20 @@
+{
+  "type": "score-sheet-seals",
+  "lane": "lane-b-grok-auditor",
+  "rubric_version": "v14",
+  "prereg_sha256": "8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8",
+  "sealed_at": "2026-10-14T21:12:00Z",
+  "seals": {
+    "langchain-ai/langchain": "94d66b707025cfa7333ffa994e46ac7678747ca0cf6aca0bf5500885a853ed35",
+    "bytedance/deer-flow": "d7d58c170ca873fe18d04f6136588e918e32385ef9ce06a84b7446983d6add5f",
+    "NousResearch/hermes-agent": "7b1388cc2d6cc2e2744a5833b63cdebb45374961fb4e22a1713031764cb24cd0",
+    "Significant-Gravitas/AutoGPT": "d08d4f733be0a4768a88c8aa26ed2cf6b02128a7bcf91b4a0deff38522e43d85",
+    "FoundationAgents/MetaGPT": "3f4dc7da91054ac92af89efde1f934f364948a624883e00360834ce18aaab714",
+    "deepseek-ai/deepseek-harness": "96b9a6d025f5623e73610486d2ac5203a5559dd76dcdbb3ee5227271b6903494",
+    "google-gemini/gemini-cli": "fc07b221326af7b2b71ddd7e8c5a9583daf9f35fc5b077ccde9f2c05a424dc5f",
+    "OpenHands/OpenHands": "53f7cbefbe1ded1cf325bd6abf3f84b12975005ac92f2de3b6188f1e5425c4bb",
+    "ruvnet/ruflo": "ea25329acd90efe678661e9037c77b240d73220a63cb3a54d36eb58a9bf3b6eb",
+    "openclaw/openclaw": "12ea5c5a15f196f69cae74e5b3d4f530712bbf83e8d386ce68ae0c2defc98976"
+  },
+  "note": "SHA-256 of each canonical score sheet (sorted-keys JSON, no seal block). Lane B scored blind from evidence packs; seals published before reveal per rubric s8."
+}

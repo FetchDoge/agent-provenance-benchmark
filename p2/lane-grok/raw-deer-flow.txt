@@ -1,0 +1,6 @@
+=== STDOUT ===
+{"framework": "bytedance/deer-flow", "dimensions": {"D1": {"score": 0, "flag_set": [], "evidence_tier": "LIVE", "rationale": "Calls appear in a LangChain message transcript without timestamps. Anchor 0; level 2 unmet; no set or payload loss."}, "D2": {"score": 0, "evidence_tier": "LIVE", "rationale": "No signature fields on any live artifact. Evidence pack states no replay or cryptographic verification story."}, "D3": {"score": 0, "evidence_tier": "LIVE", "rationale": "No sequence numbers or entry-bound timestamps. Order is implicit message-array order a presenter can permute."}, "D4": {"score": 0, "evidence_tier": "LIVE", "rationale": "Entries lack a run, session, or agent identifier. Message ids are not run identity."}, "D5": {"score": 1, "evidence_tier": "LIVE", "rationale": "README documents opt-in pii_redaction, not exercised. T3 secret cleartext twice; redact-word count zero."}}}
+
+=== STDERR ===
+
+[bot=auditor input=5465 (cached=1152) output=17511 cost=$0.1143 zdr=false]

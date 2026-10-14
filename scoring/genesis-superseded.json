@@ -1,0 +1,11 @@
+{
+  "attestation_id": "9ef6d100ce23461d#000000",
+  "issuer": "agent:benchmark-phase3-v14",
+  "subject": "tool:benchmark-genesis",
+  "statement": "{\"args\":\"{\\\"prereg_sha256\\\":\\\"8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8\\\",\\\"rubric_version\\\":\\\"v14\\\"}\",\"disclosure\":\"full\",\"ended_at\":\"2026-10-14T03:00:31.103Z\",\"prev_hash\":null,\"result\":\"{\\\"status\\\":\\\"genesis\\\",\\\"packet\\\":\\\"frozen-v14\\\"}\",\"seq\":0,\"started_at\":\"2026-10-14T03:00:31.103Z\",\"tool\":\"benchmark-genesis\",\"v\":\"if-statement-v1\"}",
+  "provenance": "run:9ef6d100ce23461d sdk:ifts/0.1.0",
+  "issued_at": "2026-10-14T03:00:31.103Z",
+  "key_id": "ed25519:ZFo8LmYmAhA0pOW8lZ1z0KfK8JCtVJIv6e10V-kiDik",
+  "sig_alg": "Ed25519",
+  "signature": "pJNDIxx7X5SZMepvFVXqmODvONxmfVH7Kv5x+o18VxJ8jTVTOzO/4zuZp1icnmxUH/XgDuAiOacwGReVbAxeCg=="
+}

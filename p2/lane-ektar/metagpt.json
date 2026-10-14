@@ -1,0 +1,42 @@
+{
+  "sheet_version": "canonical-score-sheet-v1",
+  "rubric_version": "v14",
+  "prereg_sha256": "8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8",
+  "lane": "lane-a-ektar",
+  "framework": "FoundationAgents/MetaGPT",
+  "pinned_sha": "11cdf466d042aece04fc6cfd13b28e1a70341b1f",
+  "evidence_basis": "LIVE",
+  "dimensions": {
+    "D1": {
+      "score": 2,
+      "evidence_tier": "LIVE",
+      "rationale": "RoleZero memory record covers every call incl. a rejected Plan call; T2 complete for calls made (agent pre-created the directory); no per-entry timestamps; no coverage assertion.",
+      "observation_seqs": [],
+      "flag_set": []
+    },
+    "D2": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "No signatures or verification story.",
+      "observation_seqs": []
+    },
+    "D3": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "Message-list order only; no seq/timestamps bound to entries.",
+      "observation_seqs": []
+    },
+    "D4": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "sent_from is empty on the recorded messages and roles are only user/assistant; no agent/run identifier bound to entries.",
+      "observation_seqs": []
+    },
+    "D5": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "Fixture secret in cleartext x2; no redaction mechanism found in pinned docs or source.",
+      "observation_seqs": []
+    }
+  }
+}

@@ -1,0 +1,7 @@
+=== STDOUT ===
+{"framework": "openclaw/openclaw", "dimensions": {"D1": {"score": 0, "flag_set": [], "evidence_tier": "DOC", "rationale": "Session transcript pairs tool calls with toolResults in sequenced JSON records; name, arguments, and timestamps unspecified."}, "D2": {"score": 0, "evidence_tier": "DOC", "rationale": "No signature scheme or deterministic replay is stated for the session archive."}, "D3": {"score": 1, "evidence_tier": "DOC", "rationale": "Archive schema binds seq INTEGER NOT NULL on each record; no cryptographic linkage stated."}, "D4": {"score": 0, "evidence_tier": "DOC", "rationale": "Sessions are per-agent, but entries lack a bound run or agent identifier; owns_run is a flag."}, "D5": {"score": 0, "evidence_tier": "DOC", "rationale": "Record format is described and no transcript redaction mechanism is stated."}}}
+
+=== STDERR ===
+attempt 1/3 failed (transient: RemoteDisconnected: Remote end closed connection without response); retrying in 5s…
+
+[bot=auditor input=6618 (cached=6528) output=17778 cost=$0.1101 zdr=false]

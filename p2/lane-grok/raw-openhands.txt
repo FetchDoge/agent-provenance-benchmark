@@ -1,0 +1,6 @@
+=== STDOUT ===
+{"framework": "OpenHands/OpenHands", "dimensions": {"D1": {"score": 0, "flag_set": [], "evidence_tier": "DOC", "rationale": "Pinned types describe conversation event fetch and transcript export, not a per-tool-call record of name, arguments, and result."}, "D2": {"score": 0, "evidence_tier": "DOC", "rationale": "No signing, replay, or cryptographic verification mechanism is stated for the event record in the pinned repository."}, "D3": {"score": 1, "evidence_tier": "DOC", "rationale": "Events carry ISO 8601 timestamps with TIMESTAMP sort, an ordering key bound to entries; no hash-chain linkage is stated."}, "D4": {"score": 1, "evidence_tier": "DOC", "rationale": "Events are fetched per conversationId, a stable session scope for the record; no cryptographic identity is stated."}, "D5": {"score": 0, "evidence_tier": "DOC", "rationale": "An event record format is described, and no redaction mechanism is stated in the pinned repository."}}}
+
+=== STDERR ===
+
+[bot=auditor input=6763 (cached=1152) output=9552 cost=$0.0691 zdr=false]

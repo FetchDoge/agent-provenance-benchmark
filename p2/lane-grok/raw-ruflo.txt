@@ -1,0 +1,7 @@
+=== STDOUT ===
+{"framework": "ruvnet/ruflo", "dimensions": {"D1": {"score": 0, "flag_set": [], "evidence_tier": "DOC", "rationale": "No per-tool-call agent-run record is described; executor emits completion text only, not a call log."}, "D2": {"score": 0, "evidence_tier": "DOC", "rationale": "No run-record signature or deterministic replay is specified; ed25519 verifies federation agents, not records."}, "D3": {"score": 0, "evidence_tier": "DOC", "rationale": "No sequence numbers, bound timestamps, or predecessor commitment described for agent-run records."}, "D4": {"score": 1, "evidence_tier": "DOC", "rationale": "agentId is pervasive in the task/memory data model and on executor input; entries are not key-signed."}, "D5": {"score": "UNVERIFIED", "evidence_tier": "DOC", "rationale": "Run-record redaction undocumented; PII stripping covers federation messages only, not run records."}}}
+
+=== STDERR ===
+attempt 1/3 failed (transient: RemoteDisconnected: Remote end closed connection without response); retrying in 5s…
+
+[bot=auditor input=6531 (cached=6528) output=20195 cost=$0.1244 zdr=false]

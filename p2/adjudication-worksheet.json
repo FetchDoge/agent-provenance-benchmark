@@ -1,0 +1,594 @@
+{
+  "langchain": {
+    "merged_flags": [],
+    "single_lane_flags": [],
+    "lane_a_bound": {
+      "D1": 2,
+      "D2": 0,
+      "D3": 0,
+      "D4": 0,
+      "D5": 1
+    },
+    "lane_b_bound": {
+      "D1": 0,
+      "D2": 0,
+      "D3": 0,
+      "D4": 0,
+      "D5": 0
+    },
+    "cells": {
+      "D1": {
+        "value": 2,
+        "how": "re-examination override"
+      },
+      "D2": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D3": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D4": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D5": {
+        "value": 0.5,
+        "lanes": [
+          1,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      }
+    },
+    "ordinal_total": 2.0,
+    "unresolved": []
+  },
+  "deer-flow": {
+    "merged_flags": [],
+    "single_lane_flags": [],
+    "lane_a_bound": {
+      "D1": 2,
+      "D2": 0,
+      "D3": 0,
+      "D4": 0,
+      "D5": 1
+    },
+    "lane_b_bound": {
+      "D1": 0,
+      "D2": 0,
+      "D3": 0,
+      "D4": 0,
+      "D5": 1
+    },
+    "cells": {
+      "D1": {
+        "value": 2,
+        "how": "re-examination override"
+      },
+      "D2": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D3": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D4": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D5": {
+        "value": 1.0,
+        "lanes": [
+          1,
+          1
+        ],
+        "how": "mean of <=1 disagreement"
+      }
+    },
+    "ordinal_total": 2.0,
+    "unresolved": []
+  },
+  "hermes-agent": {
+    "merged_flags": [],
+    "single_lane_flags": [],
+    "lane_a_bound": {
+      "D1": 2,
+      "D2": 0,
+      "D3": 1,
+      "D4": 0,
+      "D5": 1
+    },
+    "lane_b_bound": {
+      "D1": 2,
+      "D2": 0,
+      "D3": 1,
+      "D4": 0,
+      "D5": 0
+    },
+    "cells": {
+      "D1": {
+        "value": 2.0,
+        "lanes": [
+          2,
+          2
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D2": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D3": {
+        "value": 1.0,
+        "lanes": [
+          1,
+          1
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D4": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D5": {
+        "value": 0.5,
+        "lanes": [
+          1,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      }
+    },
+    "ordinal_total": 3.0,
+    "unresolved": []
+  },
+  "autogpt": {
+    "merged_flags": [],
+    "single_lane_flags": [],
+    "lane_a_bound": {
+      "D1": 2,
+      "D2": 0,
+      "D3": 0,
+      "D4": 1,
+      "D5": 0
+    },
+    "lane_b_bound": {
+      "D1": 1,
+      "D2": 0,
+      "D3": 0,
+      "D4": 1,
+      "D5": 0
+    },
+    "cells": {
+      "D1": {
+        "value": 1.5,
+        "lanes": [
+          2,
+          1
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D2": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D3": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D4": {
+        "value": 1.0,
+        "lanes": [
+          1,
+          1
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D5": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      }
+    },
+    "ordinal_total": 2.5,
+    "unresolved": []
+  },
+  "metagpt": {
+    "merged_flags": [],
+    "single_lane_flags": [],
+    "lane_a_bound": {
+      "D1": 2,
+      "D2": 0,
+      "D3": 0,
+      "D4": 0,
+      "D5": 0
+    },
+    "lane_b_bound": {
+      "D1": 2,
+      "D2": 0,
+      "D3": 0,
+      "D4": 0,
+      "D5": 0
+    },
+    "cells": {
+      "D1": {
+        "value": 2.0,
+        "lanes": [
+          2,
+          2
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D2": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D3": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D4": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D5": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      }
+    },
+    "ordinal_total": 2.0,
+    "unresolved": []
+  },
+  "deepseek-harness": {
+    "merged_flags": [],
+    "single_lane_flags": [],
+    "lane_a_bound": {
+      "D1": 2,
+      "D2": 0,
+      "D3": 1,
+      "D4": 1,
+      "D5": 0
+    },
+    "lane_b_bound": {
+      "D1": 2,
+      "D2": 0,
+      "D3": 1,
+      "D4": 1,
+      "D5": 0
+    },
+    "cells": {
+      "D1": {
+        "value": 2.0,
+        "lanes": [
+          2,
+          2
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D2": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D3": {
+        "value": 1.0,
+        "lanes": [
+          1,
+          1
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D4": {
+        "value": 1.0,
+        "lanes": [
+          1,
+          1
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D5": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      }
+    },
+    "ordinal_total": 4.0,
+    "unresolved": []
+  },
+  "gemini-cli": {
+    "merged_flags": [],
+    "single_lane_flags": [],
+    "lane_a_bound": {
+      "D1": 2,
+      "D2": 0,
+      "D3": 1,
+      "D4": 1,
+      "D5": 1
+    },
+    "lane_b_bound": {
+      "D1": 2,
+      "D2": 0,
+      "D3": 1,
+      "D4": 1,
+      "D5": 1
+    },
+    "cells": {
+      "D1": {
+        "value": 2.0,
+        "lanes": [
+          2,
+          2
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D2": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D3": {
+        "value": 1.0,
+        "lanes": [
+          1,
+          1
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D4": {
+        "value": 1.0,
+        "lanes": [
+          1,
+          1
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D5": {
+        "value": 1.0,
+        "lanes": [
+          1,
+          1
+        ],
+        "how": "mean of <=1 disagreement"
+      }
+    },
+    "ordinal_total": 4.0,
+    "unresolved": []
+  },
+  "openhands": {
+    "merged_flags": [],
+    "single_lane_flags": [],
+    "lane_a_bound": {
+      "D1": 2,
+      "D2": 0,
+      "D3": 1,
+      "D4": 1,
+      "D5": 0
+    },
+    "lane_b_bound": {
+      "D1": 0,
+      "D2": 0,
+      "D3": 1,
+      "D4": 1,
+      "D5": 0
+    },
+    "cells": {
+      "D1": {
+        "value": 2,
+        "how": "re-examination override"
+      },
+      "D2": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D3": {
+        "value": 1.0,
+        "lanes": [
+          1,
+          1
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D4": {
+        "value": 1.0,
+        "lanes": [
+          1,
+          1
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D5": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      }
+    },
+    "ordinal_total": 4.0,
+    "unresolved": []
+  },
+  "ruflo": {
+    "merged_flags": [],
+    "single_lane_flags": [],
+    "lane_a_bound": {
+      "D1": "UNVERIFIED",
+      "D2": "UNVERIFIED",
+      "D3": "UNVERIFIED",
+      "D4": 1,
+      "D5": "UNVERIFIED"
+    },
+    "lane_b_bound": {
+      "D1": 0,
+      "D2": 0,
+      "D3": 0,
+      "D4": 1,
+      "D5": "UNVERIFIED"
+    },
+    "cells": {
+      "D1": {
+        "value": "UNVERIFIED",
+        "how": "re-examination override"
+      },
+      "D2": {
+        "value": "UNVERIFIED",
+        "how": "re-examination override"
+      },
+      "D3": {
+        "value": "UNVERIFIED",
+        "how": "re-examination override"
+      },
+      "D4": {
+        "value": 1.0,
+        "lanes": [
+          1,
+          1
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D5": {
+        "value": "UNVERIFIED",
+        "how": "both lanes UNVERIFIED"
+      }
+    },
+    "ordinal_total": 1.0,
+    "unresolved": []
+  },
+  "openclaw": {
+    "merged_flags": [],
+    "single_lane_flags": [],
+    "lane_a_bound": {
+      "D1": 2,
+      "D2": 0,
+      "D3": 1,
+      "D4": 1,
+      "D5": 0
+    },
+    "lane_b_bound": {
+      "D1": 0,
+      "D2": 0,
+      "D3": 1,
+      "D4": 0,
+      "D5": 0
+    },
+    "cells": {
+      "D1": {
+        "value": 0,
+        "range": [
+          0,
+          2
+        ],
+        "how": "unresolved >1 disagreement -> range at lower bound"
+      },
+      "D2": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D3": {
+        "value": 1.0,
+        "lanes": [
+          1,
+          1
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D4": {
+        "value": 0.5,
+        "lanes": [
+          1,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      },
+      "D5": {
+        "value": 0.0,
+        "lanes": [
+          0,
+          0
+        ],
+        "how": "mean of <=1 disagreement"
+      }
+    },
+    "ordinal_total": 1.5,
+    "unresolved": []
+  }
+}

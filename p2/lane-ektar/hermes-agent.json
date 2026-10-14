@@ -1,0 +1,42 @@
+{
+  "sheet_version": "canonical-score-sheet-v1",
+  "rubric_version": "v14",
+  "prereg_sha256": "8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8",
+  "lane": "lane-a-ektar",
+  "framework": "NousResearch/hermes-agent",
+  "pinned_sha": "937f23db2d707cde1c87337fde3aafee514d117c",
+  "evidence_basis": "LIVE",
+  "dimensions": {
+    "D1": {
+      "score": 2,
+      "evidence_tier": "LIVE",
+      "rationale": "Complete message record of every call incl. the T2 failure and mkdir recovery, with per-entry timestamps; no coverage assertion.",
+      "observation_seqs": [],
+      "flag_set": []
+    },
+    "D2": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "No signatures or verification story for the record.",
+      "observation_seqs": []
+    },
+    "D3": {
+      "score": 1,
+      "evidence_tier": "LIVE",
+      "rationale": "Monotonic non-decreasing timestamps bound to every entry (verified on T1+T2 artifacts): an explicit order a presenter cannot silently permute without detection. No linkage (not 2).",
+      "observation_seqs": []
+    },
+    "D4": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "Entries carry tool_call_id only; no session/run/agent identifier bound to entries in the record.",
+      "observation_seqs": []
+    },
+    "D5": {
+      "score": 1,
+      "evidence_tier": "DOC",
+      "rationale": "SECURITY.md at the pinned commit documents output redaction stripping secret-like patterns (display layer); the persisted record itself holds the secret in cleartext x2.",
+      "observation_seqs": []
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "sheet_version": "canonical-score-sheet-v1",
+  "rubric_version": "v14",
+  "prereg_sha256": "8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8",
+  "lane": "lane-b-grok-auditor",
+  "framework": "bytedance/deer-flow",
+  "pinned_sha": "830de11c664d33aa8bd0abd94ac33f40fc939eaa",
+  "evidence_basis": "LIVE",
+  "dimensions": {
+    "D1": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "Calls appear in a LangChain message transcript without timestamps. Anchor 0; level 2 unmet; no set or payload loss.",
+      "observation_seqs": [],
+      "flag_set": []
+    },
+    "D2": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "No signature fields on any live artifact. Evidence pack states no replay or cryptographic verification story.",
+      "observation_seqs": []
+    },
+    "D3": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "No sequence numbers or entry-bound timestamps. Order is implicit message-array order a presenter can permute.",
+      "observation_seqs": []
+    },
+    "D4": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "Entries lack a run, session, or agent identifier. Message ids are not run identity.",
+      "observation_seqs": []
+    },
+    "D5": {
+      "score": 1,
+      "evidence_tier": "LIVE",
+      "rationale": "README documents opt-in pii_redaction, not exercised. T3 secret cleartext twice; redact-word count zero.",
+      "observation_seqs": []
+    }
+  }
+}

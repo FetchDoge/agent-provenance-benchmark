@@ -1,0 +1,12 @@
+{
+  "langchain-ai/langchain": "7985cae27fe44b8ae43a11a185bbd931549de5b86f83c9cc1f22b921aae59e88",
+  "bytedance/deer-flow": "6f068d033b3b0b6a49183f9d35e58343016385ebd2379a9fae90b5f08df60d36",
+  "NousResearch/hermes-agent": "3b88708847f03b13014a773d63da977fe628b8357df6dfc8e49d1c093b0e8458",
+  "Significant-Gravitas/AutoGPT": "31d613d1ab466607a9dcf4367baccfa658a45b31a0efa06ba207e03e3713e40a",
+  "FoundationAgents/MetaGPT": "e93a5289e68050abde90d2becc1c877debe0af9bb0bbd6401670ab0e70b51563",
+  "deepseek-ai/deepseek-harness": "f896c47e0ddb43ff90771c60c35760c1816103d0d171065ae417df76c86a1bda",
+  "google-gemini/gemini-cli": "6d01b1178c9503b1486feed286d8fb65329eccf16d9cb1e2a12ed5277f659212",
+  "OpenHands/OpenHands": "9ad3c5565c9d3e5d6909b7bc81ef293dcb4f879367a3e0e73e8c077a05d4dbe1",
+  "ruvnet/ruflo": "eeb67b4e4c1bd12a5319b0a5dbb58d662560f80ad3e83818b3307c8bb2041d5d",
+  "openclaw/openclaw": "64246c75016fbe4e57956a0607451690ed13d70b99133c9f63c44d43ca72d6c7"
+}

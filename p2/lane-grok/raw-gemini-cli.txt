@@ -1,0 +1,6 @@
+=== STDOUT ===
+{"framework": "google-gemini/gemini-cli", "dimensions": {"D1": {"score": 2, "flag_set": [], "evidence_tier": "DOC", "rationale": "Pinned source specifies ToolCallRecord with name, args, result, and timestamp. No loss asserted and no coverage assertion."}, "D2": {"score": 0, "evidence_tier": "DOC", "rationale": "No signature, identified key, algorithm, or deterministic replay is stated. Described record format lacks a verification story."}, "D3": {"score": 1, "evidence_tier": "DOC", "rationale": "Timestamp fields are bound to record entries. No sequence numbers, hash chain, or closing record is stated."}, "D4": {"score": 1, "evidence_tier": "DOC", "rationale": "sessionId on ConversationRecord and optional agentId on ToolCallRecord are stable identifiers, not cryptographic identity."}, "D5": {"score": 1, "evidence_tier": "DOC", "rationale": "Docs state environment-variable redaction, off by default, unexercised. Verification-preserving redaction is not described."}}}
+
+=== STDERR ===
+
+[bot=auditor input=6363 (cached=1152) output=10464 cost=$0.0738 zdr=false]

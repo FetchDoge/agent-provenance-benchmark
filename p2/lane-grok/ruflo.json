@@ -1,0 +1,42 @@
+{
+  "sheet_version": "canonical-score-sheet-v1",
+  "rubric_version": "v14",
+  "prereg_sha256": "8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8",
+  "lane": "lane-b-grok-auditor",
+  "framework": "ruvnet/ruflo",
+  "pinned_sha": "caf5078be6627c6496fa2497a63b72e80a0bcf14",
+  "evidence_basis": "DOC",
+  "dimensions": {
+    "D1": {
+      "score": 0,
+      "evidence_tier": "DOC",
+      "rationale": "No per-tool-call agent-run record is described; executor emits completion text only, not a call log.",
+      "observation_seqs": [],
+      "flag_set": []
+    },
+    "D2": {
+      "score": 0,
+      "evidence_tier": "DOC",
+      "rationale": "No run-record signature or deterministic replay is specified; ed25519 verifies federation agents, not records.",
+      "observation_seqs": []
+    },
+    "D3": {
+      "score": 0,
+      "evidence_tier": "DOC",
+      "rationale": "No sequence numbers, bound timestamps, or predecessor commitment described for agent-run records.",
+      "observation_seqs": []
+    },
+    "D4": {
+      "score": 1,
+      "evidence_tier": "DOC",
+      "rationale": "agentId is pervasive in the task/memory data model and on executor input; entries are not key-signed.",
+      "observation_seqs": []
+    },
+    "D5": {
+      "score": "UNVERIFIED",
+      "evidence_tier": "DOC",
+      "rationale": "Run-record redaction undocumented; PII stripping covers federation messages only, not run records.",
+      "observation_seqs": []
+    }
+  }
+}

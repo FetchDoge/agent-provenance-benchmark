@@ -1,0 +1,6 @@
+=== STDOUT ===
+{"framework": "FoundationAgents/MetaGPT", "dimensions": {"D1": {"score": 2, "flag_set": [], "evidence_tier": "LIVE", "rationale": "Every tool call is in the LIVE message record, including Plan rejection, with arguments and results. No set or payload loss."}, "D2": {"score": 0, "evidence_tier": "LIVE", "rationale": "No signature fields in LIVE artifacts. No replay mode or verification story is in the evidence pack."}, "D3": {"score": 0, "evidence_tier": "LIVE", "rationale": "Order is message-array order only. No sequence numbers, bound timestamps, or exercised hash linkage."}, "D4": {"score": 0, "evidence_tier": "LIVE", "rationale": "sent_from is empty. No run id, session id, or agent name is bound to entries. No signatures."}, "D5": {"score": 0, "evidence_tier": "LIVE", "rationale": "T3 secret appears twice verbatim in web_fetch arguments. redact-word count is zero. No redaction mechanism evidenced."}}}
+
+=== STDERR ===
+
+[bot=auditor input=5794 (cached=1152) output=15181 cost=$0.1009 zdr=false]

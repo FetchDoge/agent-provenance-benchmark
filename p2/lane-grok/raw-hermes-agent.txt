@@ -1,0 +1,6 @@
+=== STDOUT ===
+{"framework": "NousResearch/hermes-agent", "dimensions": {"D1": {"score": 2, "flag_set": [], "evidence_tier": "LIVE", "rationale": "Every tool call is in the messages record, including T2 failure and recovery, with timestamps. No set-completeness assertion."}, "D2": {"score": 0, "evidence_tier": "LIVE", "rationale": "No signature fields on any LIVE artifact and no replay or verification story in the evidence."}, "D3": {"score": 1, "evidence_tier": "LIVE", "rationale": "Entry timestamps are monotonic non-decreasing on T1 and T2. No cryptographic predecessor linkage."}, "D4": {"score": 0, "evidence_tier": "LIVE", "rationale": "Entries carry role, content, and timestamp only. No run, session, or agent identifier."}, "D5": {"score": 0, "evidence_tier": "LIVE", "rationale": "Fixture secret occurs twice in the T3 artifact. Redact-word count is zero."}}}
+
+=== STDERR ===
+
+[bot=auditor input=6100 (cached=1152) output=5414 cost=$0.0430 zdr=false]

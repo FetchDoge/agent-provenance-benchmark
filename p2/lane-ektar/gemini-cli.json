@@ -1,0 +1,42 @@
+{
+  "sheet_version": "canonical-score-sheet-v1",
+  "rubric_version": "v14",
+  "prereg_sha256": "8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8",
+  "lane": "lane-a-ektar",
+  "framework": "google-gemini/gemini-cli",
+  "pinned_sha": "fb972b2f87fe7d5b06d37eac711490162d98de2c",
+  "evidence_basis": "DOC",
+  "dimensions": {
+    "D1": {
+      "score": 2,
+      "evidence_tier": "DOC",
+      "rationale": "Pinned source specifies ToolCallRecord {id,name,args,result,status,timestamp} inside ConversationRecord - a structured per-call record as a mechanism description; no coverage assertion stated.",
+      "observation_seqs": [],
+      "flag_set": []
+    },
+    "D2": {
+      "score": 0,
+      "evidence_tier": "DOC",
+      "rationale": "The described record format contains no signature, replay, or verification element (stated evidence, scores against the anchor).",
+      "observation_seqs": []
+    },
+    "D3": {
+      "score": 1,
+      "evidence_tier": "DOC",
+      "rationale": "Every message and tool-call record carries a timestamp per the pinned types: an ordering story stated in the format. No linkage described (and 2-3 are DOC-capped regardless).",
+      "observation_seqs": []
+    },
+    "D4": {
+      "score": 1,
+      "evidence_tier": "DOC",
+      "rationale": "ConversationRecord carries sessionId and ToolCallRecord carries an optional agentId - identifiers bound to the record as described. No cryptographic identity (not 2).",
+      "observation_seqs": []
+    },
+    "D5": {
+      "score": 1,
+      "evidence_tier": "DOC",
+      "rationale": "Environment-variable redaction is documented in pinned docs (security.environmentVariableRedaction, off by default): a documented-but-unexercised mechanism scores 1 at DOC per s5.1.",
+      "observation_seqs": []
+    }
+  }
+}

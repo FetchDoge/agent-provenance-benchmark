@@ -1,0 +1,42 @@
+{
+  "sheet_version": "canonical-score-sheet-v1",
+  "rubric_version": "v14",
+  "prereg_sha256": "8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8",
+  "lane": "lane-a-ektar",
+  "framework": "bytedance/deer-flow",
+  "pinned_sha": "830de11c664d33aa8bd0abd94ac33f40fc939eaa",
+  "evidence_basis": "LIVE",
+  "dimensions": {
+    "D1": {
+      "score": 2,
+      "evidence_tier": "LIVE",
+      "rationale": "LangChain-format message record of every tool call incl. the failed T2 call, with args and results; no coverage assertion; no per-entry timestamps.",
+      "observation_seqs": [],
+      "flag_set": []
+    },
+    "D2": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "No signed records, no replay or verification story for the record.",
+      "observation_seqs": []
+    },
+    "D3": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "Message-list order only; no sequence discipline or timestamps bound to entries.",
+      "observation_seqs": []
+    },
+    "D4": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "Per-message ids only; no run/agent identifier bound to entries.",
+      "observation_seqs": []
+    },
+    "D5": {
+      "score": 1,
+      "evidence_tier": "DOC",
+      "rationale": "README documents opt-in pii_redaction middleware and secret-redacted event metadata (content returned unchanged); not enabled in the run - secret in cleartext x2 in the record content.",
+      "observation_seqs": []
+    }
+  }
+}

@@ -1,0 +1,6 @@
+=== STDOUT ===
+{"framework": "Significant-Gravitas/AutoGPT", "dimensions": {"D1": {"score": 1, "flag_set": [], "evidence_tier": "LIVE", "rationale": "Every observed call is in episodes with arguments and results. No per-entry timestamps, so level 2 fails. Neither loss flag observed."}, "D2": {"score": 0, "evidence_tier": "LIVE", "rationale": "No signature fields in the artifacts. Pack shows no replay mode or exercised cryptographic verification story."}, "D3": {"score": 0, "evidence_tier": "LIVE", "rationale": "Order is episode-array position only. No sequence numbers, bound timestamps, or exercised hash chain."}, "D4": {"score": 1, "evidence_tier": "LIVE", "rationale": "state.json carries document-level agent_id for the run holding all episodes. No cryptographic identity binding."}, "D5": {"score": 0, "evidence_tier": "LIVE", "rationale": "T3 secret is cleartext three times. Redact-word count is zero. No redaction mechanism in the pack."}}}
+
+=== STDERR ===
+
+[bot=auditor input=6011 (cached=1152) output=13472 cost=$0.0911 zdr=false]

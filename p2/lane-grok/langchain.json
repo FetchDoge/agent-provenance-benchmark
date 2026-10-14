@@ -1,0 +1,42 @@
+{
+  "sheet_version": "canonical-score-sheet-v1",
+  "rubric_version": "v14",
+  "prereg_sha256": "8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8",
+  "lane": "lane-b-grok-auditor",
+  "framework": "langchain-ai/langchain",
+  "pinned_sha": "57236d55d9ffc8634bda987861e6fce460aff268",
+  "evidence_basis": "LIVE",
+  "dimensions": {
+    "D1": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "Does not meet level 1 or 2: set is complete with no payload truncation, yet timestamps are absent.",
+      "observation_seqs": [],
+      "flag_set": []
+    },
+    "D2": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "No signature fields on LIVE artifacts and no replay or verification story in the evidence.",
+      "observation_seqs": []
+    },
+    "D3": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "No sequence numbers or timestamps; order is implicit message order. No hash chain observed.",
+      "observation_seqs": []
+    },
+    "D4": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "No run id, session id, or agent name in the message fields. Message id is not actor identity.",
+      "observation_seqs": []
+    },
+    "D5": {
+      "score": 0,
+      "evidence_tier": "LIVE",
+      "rationale": "T3 secret occurs twice in the artifact and redact-word occurs zero times. No redaction story.",
+      "observation_seqs": []
+    }
+  }
+}
