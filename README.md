@@ -16,13 +16,13 @@ This benchmark measures that property, and only that property, across the ten mo
 
 ## Method, in defensive terms
 
-- **Pre-registration under hash commitment.** The rubric, task battery, and framework list were frozen into a packet, hashed, and published to the public Notion page above *before* any framework ran. A second copy went to the author's Grok project, which is not publicly viewable. The success criteria could not move after the observations existed.
+- **Pre-registration under hash commitment.** The rubric, task battery, and framework list were frozen into a packet, hashed, and published to the public Notion page above *before* any framework ran. A second copy went to the author's private AI-workspace project, which is not publicly viewable. The success criteria could not move after the observations existed.
 - **Adversarial rubric review.** The rubric survived 14 drafts under two independent review lanes (adversary + auditor) before it was allowed to freeze.
 - **Identical task battery, three probes per framework.**
   - **T1 — chain integrity:** fetch → write → hash. Does the record preserve the full call chain?
   - **T2 — fault injection:** a write into a non-existent directory, engineered to fail mid-run. Does the record preserve *negative evidence* — the failed call — or silently drop it?
   - **T3 — canary credential:** one tool call carries a marked secret in its arguments. Does the record leak it at rest? (**Disclosure control** is scored and published, but excluded from the ranking by design.)
-- **Commit–reveal scoring.** Two scorer lanes (the author, and a Grok auditor lane) scored every cell from the same evidence in separate sittings. Each lane committed SHA-256 hashes of its score sheets to the public venue *as each seal was made*, before any sheet was revealed to either lane. Disagreements were adjudicated by the rubric's mechanical procedure — flag union and gate binding first, means for ≤1-point splits, published ranges for unresolved splits — never by quiet negotiation.
+- **Commit–reveal scoring.** Two scorer lanes (the author, and an independent model-auditor lane) scored every cell from the same evidence in separate sittings. Each lane committed SHA-256 hashes of its score sheets to the public venue *as each seal was made*, before any sheet was revealed to either lane. Disagreements were adjudicated by the rubric's mechanical procedure — flag union and gate binding first, means for ≤1-point splits, published ranges for unresolved splits — never by quiet negotiation.
 - **The benchmark eats its own cooking.** Every seal, observation, and score in this project is recorded in a hash-chained, Ed25519-signed transcript built on the author's forensics SDK — the same instrument the rubric measures. Anyone holding the transcript can re-verify the chain with the SDK verifier.
 - **Self-grading exclusion.** The author's own frameworks (Interlock, AEGIS, interlock-forensics) appear on the board as marked reference rows only — **not scored**, by pre-registered rule.
 
@@ -68,7 +68,7 @@ Ranked dimensions: **D1** completeness (0–3), **D2** verifiability (0–3), **
 ## Limits, stated plainly
 
 - **One principal.** Both scorer lanes answer to the same author. The rubric names this correlated-bias residual rather than claiming independence; the defences are the published anchors, the published disagreements, and checkable evidence.
-- **Author-operated venues.** The pre-registration and seals live on the author's Notion and Grok project. Their version histories bind the author against *silent* rewrites, not against determined ones. Third-party anchoring (transparency log / RFC 3161) is deferred to a future public edition and was not silently substituted.
+- **Author-operated venues.** The pre-registration and seals live on the author's Notion and a private AI-workspace project. Their version histories bind the author against *silent* rewrites, not against determined ones. Third-party anchoring (transparency log / RFC 3161) is deferred to a future public edition and was not silently substituted.
 - **DOC rows are posture, not observation.** A DOC score says what a framework's documentation *describes*, discounted and flagged — never that the mechanism was exercised.
 - **One model, one battery.** Three tasks cannot exhaust a framework. The ordinal ranks record-keeping on this battery, nothing more.
 - **A harness note.** In several runs the model itself dropped the fixture's trailing newline (24 bytes fetched, 23 written). The records show it faithfully — a model behaviour, recorded as such, not a record-keeping fault.
