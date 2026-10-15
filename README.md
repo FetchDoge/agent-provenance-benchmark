@@ -4,7 +4,6 @@
 
 **Status: results — rubric v14, frozen and published before any run (2026-10-04).**
 Pre-registration packet (Notion): https://ordinary-zipper-8b9.notion.site/Phase-3-Pre-registration-Packet-v14-Freeze-2026-10-04-3ef0727dad6b8050826ac9e9a725106b
-Sealed scoring venue (Grok project): https://grok.com/project/ad9ecc2e-bf87-4edc-8351-9c19694dd227
 Packet aggregate SHA-256: `8419a9513269fcc959d2dfa785d1f2d6dbc3fb0341375ae02d28049efdc2a1c8`
 
 ---
@@ -17,7 +16,7 @@ This benchmark measures that property, and only that property, across the ten mo
 
 ## Method, in defensive terms
 
-- **Pre-registration under hash commitment.** The rubric, task battery, and framework list were frozen into a packet, hashed, and published to two public venues *before* any framework ran. The success criteria could not move after the observations existed.
+- **Pre-registration under hash commitment.** The rubric, task battery, and framework list were frozen into a packet, hashed, and published to the public Notion page above *before* any framework ran. A second copy went to the author's Grok project, which is not publicly viewable. The success criteria could not move after the observations existed.
 - **Adversarial rubric review.** The rubric survived 14 drafts under two independent review lanes (adversary + auditor) before it was allowed to freeze.
 - **Identical task battery, three probes per framework.**
   - **T1 — chain integrity:** fetch → write → hash. Does the record preserve the full call chain?
@@ -77,8 +76,8 @@ Ranked dimensions: **D1** completeness (0–3), **D2** verifiability (0–3), **
 ## Verify it yourself
 
 - Frozen packet + manifest hashes: Notion link above; packet aggregate SHA-256 `8419a951…1c8`.
-- Seal hashes for both lanes: Grok project above (files `SEALS-LANE-A.json`, `SEALS-LANE-B.json`).
-- Full scoring transcript (genesis → seals → observations → closer): in this repository, `phase3/scoring/transcript.json`; verify with the Phase 2 forensics SDK verifier.
-- Raw evidence: every scored cell cites its `artifact_sha256`; the artifacts are in this repository under `phase3/p1/runs/`.
+- Seal hashes for both lanes: in this repository, `p2/SEALS-LANE-A.json` and `p2/SEALS-LANE-B.json`.
+- Full scoring transcript (genesis → seals → observations → closer): in this repository, `scoring/transcript.json`; verify with the Phase 2 forensics SDK verifier.
+- Raw evidence: every scored cell cites its `artifact_sha256`; the artifacts are in this repository under `p1/runs/`.
 
 *The ordinal is the author's instrument, built in the open. The evidence is yours to re-weight.*
