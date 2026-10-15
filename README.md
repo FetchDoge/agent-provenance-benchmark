@@ -81,3 +81,5 @@ Ranked dimensions: **D1** completeness (0–3), **D2** verifiability (0–3), **
 - Raw evidence: every scored cell cites its `artifact_sha256`; the artifacts are in this repository under `p1/runs/`.
 
 *The ordinal is the author's instrument, built in the open. The evidence is yours to re-weight.*
+
+Built by Marcus Richards, directing AI coding agents.
