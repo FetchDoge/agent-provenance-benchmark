@@ -82,4 +82,10 @@ Ranked dimensions: **D1** completeness (0–3), **D2** verifiability (0–3), **
 
 *The ordinal is the author's instrument, built in the open. The evidence is yours to re-weight.*
 
+## License
+
+MIT. Copyright (c) 2026 Marcus Richards. See [LICENSE](LICENSE).
+
+Third-party material: the pinned runs include captured default configuration from the frameworks under test, such as the Hermes Agent default prompt (Nous Research, MIT). Those excerpts remain under their upstream licenses.
+
 Built by Marcus Richards, directing AI coding agents.
