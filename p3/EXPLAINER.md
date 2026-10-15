@@ -7,7 +7,7 @@ I built a fair test that checks whether the world's most popular AI agent tools 
 An AI agent is software that does tasks on its own: fetches things, writes files, runs commands. Afterwards, someone has to be able to answer: what did it actually do? If the record is missing steps, hides failures, or leaks secrets, you can't trust the agent with real work or real money. That problem — proving what an agent did — is exactly what your products (Permit, Interlock) exist to solve. This test measures how bad the problem is across the whole industry, with evidence nobody can argue with.
 
 ## How I kept it honest (this is the part that makes it valuable)
-- **Rules published before results.** The scoring rules were frozen and posted publicly (Notion + a public Grok project) on Oct 4, BEFORE any test ran. Like registering a clinical trial before the experiment: nobody can say you moved the goalposts after seeing the scores.
+- **Rules published before results.** The scoring rules were frozen and posted publicly on Notion on Oct 4 (a second copy sits in a private Grok project), BEFORE any test ran. Like registering a clinical trial before the experiment: nobody can say you moved the goalposts after seeing the scores.
 - **Two independent reviewers attacked the rules first.** A Grok "adversary" tried to break them and a Grok "auditor" checked every claim — 14 drafts — until both signed off.
 - **Identical conditions.** Every framework got the same 3 tasks, the same AI model, the same tools.
 - **Fingerprinted evidence.** Every result is a file with a cryptographic fingerprint (a hash). If anyone edits it later, the fingerprint won't match.
